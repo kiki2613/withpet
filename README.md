@@ -39,6 +39,8 @@
 | visit_date | Date       | null: false     |
 | comment    | text       | null: false     |
 
+*imageはActive storageで実装
+
 ### association
 
 - belongs_to :user
