@@ -10,14 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_06_26_024011) do
-  create_table "cafe", charset: "utf8", force: :cascade do |t|
+ActiveRecord::Schema[7.0].define(version: 2024_06_26_053114) do
+  create_table "cafes", charset: "utf8", force: :cascade do |t|
     t.string "name", null: false
     t.string "address", null: false
-    t.text "image", null: false
     t.string "phone_number"
     t.string "opening_times"
     t.string "closing_days"
+    t.text "attention"
     t.integer "prefecture_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
