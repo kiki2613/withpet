@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
-  root to: 'cafes#index'
-  resources :cafes, only: :index
+  root to: 'shops#index'
+  resources :shops, only: :index
 end

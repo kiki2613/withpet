@@ -1,0 +1,20 @@
+
+<div class='shop_list'>
+  <ul>
+    <% @shops.each do |shop| %>
+      <li class='shop' style="background-image: url(<%= shop.image_path %>); background-size: cover; background-position: center; width: 500px; height: 300px;">
+        <h2 class='shop_name'>
+          <%= link_to shop.name, "#" %>
+        </h2>
+        <div class='location'>
+          <p class='shop_address'>
+            <%= shop.address %>
+          </p>
+          <p class='shop_access'>
+            アクセス： <%= shop.nearest_station %>から徒歩 <%= shop.time_to_station %>分
+          </p>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+</div>

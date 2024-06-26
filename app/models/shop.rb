@@ -1,4 +1,4 @@
-class Cafe < ApplicationRecord
+class Shop < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :prefecture
 

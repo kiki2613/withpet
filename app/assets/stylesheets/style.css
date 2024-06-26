@@ -1,0 +1,29 @@
+/* ****************************************************************
+トップページ
+**************************************************************** */
+
+.shop_list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shop {
+  list-style: none;
+  position: center;
+  padding: 10px 20px;
+  margin-bottom: 30px;
+}
+
+.shop_name a {
+  color: white;
+  text-decoration: none;
+}
+
+.location {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: white;
+  margin-top: 200px;
+}
