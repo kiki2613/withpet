@@ -1,6 +1,6 @@
 class CreateCaves < ActiveRecord::Migration[7.0]
   def change
-    create_table :caves do |t|
+    create_table :cafes do |t|
       t.string      :name,          null: false
       t.string      :address,       null: false
       t.text        :image,         null: false
