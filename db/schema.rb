@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_06_26_021155) do
+ActiveRecord::Schema[7.0].define(version: 2024_06_26_022245) do
   create_table "caves", charset: "utf8", force: :cascade do |t|
     t.string "name", null: false
     t.string "address", null: false
@@ -19,6 +19,11 @@ ActiveRecord::Schema[7.0].define(version: 2024_06_26_021155) do
     t.string "opening_times"
     t.string "closing_days"
     t.integer "prefecture_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "prefectures", charset: "utf8", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
