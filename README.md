@@ -7,6 +7,7 @@
 | nickname           | string  | null: false  |
 | email              | string  | null: false, unique: true  |
 | encrypted_password | string  | null: false  |
+| age_id             | integer |              |
 | gender             | string  |              |
 | prefecture_id      | integer |              |
 
@@ -23,6 +24,9 @@
 | name          | string   | null: false     |
 | address       | string   | null: false     |
 | image         | text     | null: false     |
+| phone_number  | string   |                 |
+| opening_times | string   |                 |
+| closing_days  | string   |                 |
 | prefecture_id | integer  | null: false     |
 
 ### association
