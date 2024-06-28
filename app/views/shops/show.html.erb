@@ -1,0 +1,38 @@
+<%= render "share/header" %>
+
+<div class="show-page">
+  <div class="show-item">
+    <h2 class="shop-name-content">
+      <%= @shop.name %>
+    </h2>
+    <div class="shop-iamge-content">
+      <%= image_tag @shop.image_path ,class:"shop-image-content" %>
+    </div>
+    <ul>
+      <li class="shop-address-content">
+        <span>所在地</span>
+        <%=  @shop.address %>
+      </li>
+      <li class="shop-access-content">
+        <span>アクセス</span>
+        <%= @shop.nearest_station %>から徒歩<%= @shop.time_to_station %>分
+      </li>
+      <li class="shop-phone_number">
+        <span>TELL</span>
+        <%= @shop.phone_number %>
+      </li>
+      <li class="shop-opening_times">
+        <span>営業時間</span>
+        <%= @shop.opening_times %>
+      </li>
+      <li class="shop-closing_days">
+        <span>店休日</span>
+        <%= @shop.closing_days %>
+      </li>
+      <li class="shop-attention">
+        <span>備考</span>
+        <%= @shop.attention %>
+      </li>
+    </ul>
+  </div>
+</div>
