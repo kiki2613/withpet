@@ -75,6 +75,10 @@ group :test do
   gem "webdrivers"
 end
 
+group :production do
+  gem 'pg'
+end
+
 gem 'pry-rails'
 gem 'active_hash'
 gem 'ransack'
