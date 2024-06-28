@@ -5,31 +5,31 @@
     <h2 class="shop-name-content">
       <%= @shop.name %>
     </h2>
-    <div class="shop-iamge-content">
+    <div class="shop-content">
       <%= image_tag @shop.image_path ,class:"shop-image-content" %>
     </div>
     <ul>
-      <li class="shop-address-content">
+      <li class="shop-content">
         <span>所在地</span>
         <%=  @shop.address %>
       </li>
-      <li class="shop-access-content">
+      <li class="shop-content">
         <span>アクセス</span>
         <%= @shop.nearest_station %>から徒歩<%= @shop.time_to_station %>分
       </li>
-      <li class="shop-phone_number">
+      <li class="shop-content">
         <span>TELL</span>
         <%= @shop.phone_number %>
       </li>
-      <li class="shop-opening_times">
+      <li class="shop-content">
         <span>営業時間</span>
         <%= @shop.opening_times %>
       </li>
-      <li class="shop-closing_days">
+      <li class="shop-content">
         <span>店休日</span>
         <%= @shop.closing_days %>
       </li>
-      <li class="shop-attention">
+      <li class="shop-content">
         <span>備考</span>
         <%= @shop.attention %>
       </li>
