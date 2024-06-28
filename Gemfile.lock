@@ -46,6 +46,8 @@ GEM
       erubi (~> 1.4)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.1, >= 1.2.0)
+    active_hash (3.3.1)
+      activesupport (>= 5.0.0)
     activejob (7.0.8.4)
       activesupport (= 7.0.8.4)
       globalid (>= 0.3.6)
@@ -190,6 +192,10 @@ GEM
       zeitwerk (~> 2.5)
     rainbow (3.1.1)
     rake (13.2.1)
+    ransack (4.1.1)
+      activerecord (>= 6.1.5)
+      activesupport (>= 6.1.5)
+      i18n
     rdoc (6.7.0)
       psych (>= 4.0.0)
     regexp_parser (2.9.2)
@@ -274,6 +280,7 @@ PLATFORMS
   x86_64-darwin-23
 
 DEPENDENCIES
+  active_hash
   bootsnap
   capybara
   debug
@@ -285,6 +292,7 @@ DEPENDENCIES
   pry-rails
   puma (~> 5.0)
   rails (~> 7.0.0)
+  ransack
   rspec-rails (~> 4.0.0)
   rubocop
   selenium-webdriver
