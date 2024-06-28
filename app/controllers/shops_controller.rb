@@ -5,6 +5,10 @@ class ShopsController < ApplicationController
     search
   end
 
+  def show
+    @shop = Shop.find(params[:id])
+  end
+
   private
 
   def search
