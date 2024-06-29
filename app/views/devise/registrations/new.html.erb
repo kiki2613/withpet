@@ -40,6 +40,7 @@
     <div class="form-group">
       <div class='form-text-wrap'>
         <label class="form-text">年齢</label>
+        <span class="indispensable">必須</span>
       </div>
       <%= f.collection_select(:age_id, Age.all, :id, :name, {}, {class: "select-box", id:"age"}) %>
     </div>
