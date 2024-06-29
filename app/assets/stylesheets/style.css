@@ -132,6 +132,7 @@ shop一覧
   font-size: 30px;
   font-weight: 800;
   color: #4C384A;
+  text-shadow: 1px 2px  #946d91;
   text-decoration: none;
   position: absolute;
   top: 10%;
@@ -166,11 +167,10 @@ shop詳細ページ
 .shop-image-content {
   width: 650px;
   height: 400px;
-  margin: 0 auto;
+  margin: 0 auto 30px;
   display: block;
   object-fit: cover;
-  margin-bottom: 30px;
-  border-radius: 5p;
+  border-radius: 5px;
 }
 
 .show-item {
@@ -190,12 +190,13 @@ shop詳細ページ
   margin-bottom: 20px;
 }
 
-.shop-content {
+.shop-content-li {
   font-size: 20px;
   font-weight: 600;
   color: #fffafa;
   text-shadow: 1px 1px #4C384A;
-  margin: 10px 0 0 30px;
+  margin: 10px auto 30px;
+  list-style: none;
 }
 
 
