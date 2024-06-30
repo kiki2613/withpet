@@ -9,27 +9,27 @@
       <%= image_tag @shop.image_path ,class:"shop-image-content" %>
     </div>
     <ul>
-      <li class="shop-content">
+      <li class="shop-content-li">
         <span>所在地</span>
         <%=  @shop.address %>
       </li>
-      <li class="shop-content">
+      <li class="shop-content-li">
         <span>アクセス</span>
         <%= @shop.nearest_station %>から徒歩<%= @shop.time_to_station %>分
       </li>
-      <li class="shop-content">
+      <li class="shop-content-li">
         <span>TELL</span>
         <%= @shop.phone_number %>
       </li>
-      <li class="shop-content">
+      <li class="shop-content-li">
         <span>営業時間</span>
         <%= @shop.opening_times %>
       </li>
-      <li class="shop-content">
+      <li class="shop-content-li">
         <span>店休日</span>
         <%= @shop.closing_days %>
       </li>
-      <li class="shop-content">
+      <li class="shop-content-li">
         <span>備考</span>
         <%= @shop.attention %>
       </li>
