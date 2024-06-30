@@ -1,0 +1,184 @@
+/* ****************************************************************
+トップページ
+**************************************************************** */
+
+.main {
+  height: 100vh;
+  overflow: auto;
+  background-color: #f0e4de;
+}
+
+.top-page {
+  display: flex;
+}
+
+/* ***********************
+検索フォーム
+*********************** */
+
+.form {
+  width: 30%;
+}
+
+.search_form {
+  width: 350px;
+  margin-top: 30px;
+  margin-left: 30px;
+  padding: 20px;
+  font-size: 25px;
+  background-color: #a78c8d;
+  border-radius: 5px;
+  position: fixed;
+  top: 120px;
+}
+
+input::placeholder {
+  color: #866768;
+}
+
+.address_label {
+  color: #E25F70;
+  font-size: 30px;
+  font-weight: 600;
+  text-shadow: 1px 1px #4C384A;
+  margin-bottom: 20px;
+}
+
+.search_address input {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 50px;
+  background-color: #f8f8ff;
+  border: 1px solid white;
+  
+}
+
+.station_label {
+  color: #E25F70;
+  font-size: 30px;
+  font-weight: 600;
+  text-shadow: 1px 1px #4C384A;
+  margin-bottom: 20px;
+}
+
+.search_station input {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 50px;
+  background-color: #f8f8ff;
+  border: 1px solid white;
+}
+
+.search_btn input {
+  width: 30%;
+  height: 30px;
+  font-size: 15px;
+  background-color: #E25F70;
+  color: white;
+  border: 1px solid lightslategray;
+  border-radius: 5px;
+}
+
+
+/* **************************
+shop一覧
+************************** */
+
+.shop_list {
+  width: 70%;
+  padding-left: 100px;
+  margin-top: 100px;
+}
+
+.shop_image {
+  background-size: cover;
+  background-position: center;
+  width: 700px;
+  height: 400px;
+  display: block;
+  object-fit: cover;
+  opacity: 60%;
+  border-radius: 5px;
+}
+
+.shop {
+  background-size: cover;
+  background-position: center;
+  width: 700px;
+  height: 400px;
+  list-style: none;
+  padding: 10px 20px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.shop_name a {
+  font-size: 30px;
+  font-weight: 800;
+  color: #4C384A;
+  text-shadow: 1px 2px  #946d91;
+  text-decoration: none;
+  position: absolute;
+  top: 10%;
+  left: 5%;
+}
+
+.location {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  font-weight: 600;
+  color: #4C384A;
+  margin-top: 300px;
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+}
+
+.shop_access {
+  margin-right: auto;
+}
+
+/* ***********************************************************
+shop詳細ページ
+*********************************************************** */
+
+.show-page {
+  height: 100%;
+  padding-top: 80px;
+}
+
+.shop-image-content {
+  width: 650px;
+  height: 400px;
+  margin: 0 auto 30px;
+  display: block;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.show-item {
+  width: 700px;
+  background-color: #968485;
+  opacity: 90%;
+  margin: 50px auto 50px;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+.shop-name-content {
+  font-size: 30px;
+  font-weight: 800;
+  color: #fffafa;
+  text-shadow: 2px 1px #4C384A;
+  margin-bottom: 20px;
+}
+
+.shop-content-li {
+  font-size: 20px;
+  font-weight: 600;
+  color: #fffafa;
+  text-shadow: 1px 1px #4C384A;
+  margin: 10px auto 30px;
+  list-style: none;
+}
