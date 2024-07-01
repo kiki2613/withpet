@@ -47,7 +47,7 @@
 
     </ul>
   </div>
-  <div class="user-edit-btn">
-    <% link_to '編集する',  %>
+  <div class="user-edit">
+    <%= link_to '編集する', edit_user_registration_path(@user.id), class: 'user-edit-btn' %>
   </div>
 </div>

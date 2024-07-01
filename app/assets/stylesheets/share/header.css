@@ -18,6 +18,12 @@
   text-shadow: 2px 3px #fffafa;
 }
 
+.title-logo {
+  color: #E25F70;
+  text-shadow: 2px 3px #fffafa;
+  text-decoration: none;
+}
+
 .navbar {
   width: 30%;
   padding: 20px;
