@@ -4,6 +4,8 @@ class Shop < ApplicationRecord
     ["address", "nearest_station"]
   end
 
+  has_many :favorites
+  
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :prefecture
 
