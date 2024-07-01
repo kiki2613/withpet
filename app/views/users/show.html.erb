@@ -1,0 +1,53 @@
+<%= render "share/header" %>
+
+<div class="mypage-area">
+  <div class='mypage-wrap'>
+    <div class='mypage-header'>
+      <h1 class='mypage-header-text'>
+        <div class="mypage-text">Profile</div>
+      </h1>
+    </div>
+
+    <ul class="mypage-li">
+      <li class="mypage-group">
+        <div class='mypage-text-wrap'>
+          <div class="mypage-nickname-label">ニックネーム</div>
+          <div class="mypage-nickname">
+            <%= @user.nickname %>
+          </div>
+        </div>
+      </li>
+
+      <li class="mypage-group">
+        <div class='mypage-text-wrap'>
+          <div class="mypage-email-label">メールアドレス</div>
+          <div class="mypage-email">
+            <%= @user.email %>
+          </div>
+        </div>
+      </li>
+
+      <li class="mypage-group">
+        <div class='mypage-text-wrap'>
+          <div class="mypage-age-label">年代</div>
+          <div class="mypage-age">
+            <%= @user.age.name %>
+          </div>
+        </div>
+      </li>
+
+      <li class="mypage-group">
+        <div class='mypage-text-wrap'>
+          <div class="mypage-gender-label">性別</div>
+          <div class="mypage-gender">
+            <%= @user.gender %>
+          </div>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+  <div class="user-edit">
+    <%= link_to '編集する', edit_user_registration_path(@user.id), class: 'user-edit-btn' %>
+  </div>
+</div>

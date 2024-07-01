@@ -2,36 +2,55 @@
 
 <div class="show-page">
   <div class="show-item">
-    <h2 class="shop-name-content">
-      <%= @shop.name %>
-    </h2>
+    <div class="show-header-text">
+      <h2 class="shop-name-content">
+        <%= @shop.name %>
+      </h2>
+    </div>
     <div class="shop-content">
       <%= image_tag @shop.image_path ,class:"shop-image-content" %>
     </div>
-    <ul>
-      <li class="shop-content-li">
-        <span>所在地</span>
-        <%=  @shop.address %>
+    <ul class="shop-info-li">
+      <li class="shop-info">
+        <div class="shop-label">所在地</div>
+        <div class="shop-address">
+          <%=  @shop.address %>
+        </div>
       </li>
-      <li class="shop-content-li">
-        <span>アクセス</span>
-        <%= @shop.nearest_station %>から徒歩<%= @shop.time_to_station %>分
+
+      <li class="shop-info">
+        <div class="shop-label">アクセス</div>
+        <div class="shop-access">
+          <%= @shop.nearest_station %>から徒歩<%= @shop.time_to_station %>分
+        </div>
       </li>
-      <li class="shop-content-li">
-        <span>TELL</span>
-        <%= @shop.phone_number %>
+
+      <li class="shop-info">
+        <div class="shop-label">TELL</div>
+        <div class="shop-tell">
+          <%= @shop.phone_number %>
+        </div>
       </li>
-      <li class="shop-content-li">
-        <span>営業時間</span>
-        <%= @shop.opening_times %>
+
+      <li class="shop-info">
+        <div class="shop-label">営業時間</div>
+        <div class="shop-opening">  
+          <%= @shop.opening_times %>
+        </div>
       </li>
-      <li class="shop-content-li">
-        <span>店休日</span>
-        <%= @shop.closing_days %>
+
+      <li class="shop-info">
+        <div class="shop-label">店休日</div>
+        <div class="shop-close">
+          <%= @shop.closing_days %>
+        </div>
       </li>
-      <li class="shop-content-li">
-        <span>備考</span>
-        <%= @shop.attention %>
+
+      <li class="shop-info">
+        <div class="shop-label">備考</div>
+        <div class="shop-attention">
+          <%= @shop.attention %>
+        </div>
       </li>
     </ul>
   </div>

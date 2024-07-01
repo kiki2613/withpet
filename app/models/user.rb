@@ -13,6 +13,6 @@ class User < ApplicationRecord
   validates :age_id,
             numericality: { other_than: 1, message: 'を選択してください' }
 
-  PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i
-  validates_format_of :password, with: PASSWORD_REGEX, message: 'には英字と数字の両方を含めて設定してください'
+  validates :password,
+            presence: true, on: :create
 end
