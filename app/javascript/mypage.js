@@ -28,3 +28,4 @@ function mypage (){
 }
 
 window.addEventListener('turbo:load', mypage);
+window.addEventListener('turbo:render', mypage);

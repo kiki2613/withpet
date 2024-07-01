@@ -51,9 +51,12 @@
   margin-right: 60px;
 }
 
+/* ********************************************************
+マイページのプルダウン
+******************************************************** */
+
 .mypage-pulldown{
-  width: 120px;
-  padding: 5px 10px;
+  width: 140px;
   position: absolute;
   right: 140px;
   top: 50px;
@@ -62,18 +65,23 @@
   border-radius: 5px;
 }
 
+.mypage-pulldown a {
+  display: block;
+  padding: 5px 10px;
+}
+
+.mypage-pulldown a:hover {
+  color: #f58f9c;
+  text-shadow: #f3efea;
+  background-color: #f3efea;
+}
+
 .mypage-menu {
   list-style: none;
 }
 
 .mypage-menu:first-child,
 .mypage-menu:nth-child(2) {
-  border-bottom: 1px solid #fffafa;
-  padding-bottom: 5px;
-  margin-bottom: 5px;
-}
-
-.mypage-menu:second-child {
   border-bottom: 1px solid #fffafa;
 }
 
