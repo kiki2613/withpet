@@ -11,7 +11,7 @@
           </li>
             <ul class="mypage-pulldown hidden" id="mypage-list">
               <li class="mypage-menu">
-                <%= link_to 'マイページ', "#", class: "user-info" %>
+                <%= link_to 'プロフィール', user_path(current_user.id), class: "user-info" %>
               </li>
               <li class="mypage-menu">
                 <%= link_to 'お気に入りリスト', "#", class: "myfavorite" %>
