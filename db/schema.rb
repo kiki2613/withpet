@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_07_03_055800) do
+ActiveRecord::Schema[7.0].define(version: 2024_07_03_080627) do
   create_table "ages", charset: "utf8", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -33,6 +33,17 @@ ActiveRecord::Schema[7.0].define(version: 2024_07_03_055800) do
   create_table "prefectures", charset: "utf8", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "reviews", charset: "utf8", force: :cascade do |t|
+    t.date "visit_date", null: false
+    t.text "comment", null: false
+    t.bigint "user_id", null: false
+    t.bigint "shop_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["shop_id"], name: "index_reviews_on_shop_id"
+    t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 
   create_table "shops", charset: "utf8", force: :cascade do |t|
@@ -66,4 +77,6 @@ ActiveRecord::Schema[7.0].define(version: 2024_07_03_055800) do
 
   add_foreign_key "favorites", "shops"
   add_foreign_key "favorites", "users"
+  add_foreign_key "reviews", "shops"
+  add_foreign_key "reviews", "users"
 end
