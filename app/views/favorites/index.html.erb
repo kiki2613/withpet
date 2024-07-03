@@ -5,30 +5,21 @@
     お気に入りリスト
   </div>
   <div class="my-favorite-list">
-    <ul class="shop-li">
-      <% @favorited_shops.each do |shop| %>
-        <%= link_to shop_path(shop.id) do %>
-          <li class="shop">
-            <%= image_tag shop.image_path, class: "shop_image" %>
-            <div class="shop-info-top">
-              <h2 class='shop_name'>
-                <%= shop.name %>
-              </h2>
-              <div class='favorite-btn', id="favorite-btn<%= shop.id%>">
-                <%= render partial: "favorites/favorite", locals: { shop: shop }%>
-              </div>
-            </div>
-            <div class='location'>
-              <p class='shop_address'>
-                <%= shop.address %>
-              </p>
-              <p class='shop_access'>
-                アクセス： <%= shop.nearest_station %>から徒歩 <%= shop.time_to_station %>分
-              </p>
-            </div>
-          </li>
+    <% if @favorited_shops.present? %>
+      <ul class="shop-li">
+        <% @favorited_shops.each do |shop| %>
+          <%= render partial: 'share/shop_info', locals: { shop: shop } %>
         <% end %>
-      <% end %>
-    </ul>
+      </ul>
+    <% else %>
+      <div class="my-favorite-none">
+        <div class="my-favorite-logo">
+          お気に入りの店舗を見つけよう！
+        </div>
+        <div class="search-back">
+          <%= link_to "いますぐさがす", root_path %>
+        </div>
+      </div>
+    <% end %>
   </div>
 </div>
