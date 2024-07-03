@@ -1,5 +1,6 @@
 class Shop < ApplicationRecord
   has_many :favorites
+  has_many :favorited_by_users, through: :favorites, source: :user
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :prefecture

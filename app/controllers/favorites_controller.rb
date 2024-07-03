@@ -1,6 +1,6 @@
 class FavoritesController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_shop
+  before_action :set_shop, only: [:create, :destroy]
 
   def create
     @favorite = current_user.favorites.build(shop_id: params[:shop_id])
@@ -28,6 +28,10 @@ class FavoritesController < ApplicationController
     # else
     #   redirect_to root_path
     # end
+  end
+
+  def index
+    @favorited_shops = current_user.favorited_shops
   end
 
   private

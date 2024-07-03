@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :favorites
+  has_many :favorited_shops, through: :favorites, source: :shop
   
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :age
