@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_07_01_092640) do
+ActiveRecord::Schema[7.0].define(version: 2024_07_03_055800) do
   create_table "ages", charset: "utf8", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -23,6 +23,11 @@ ActiveRecord::Schema[7.0].define(version: 2024_07_01_092640) do
     t.datetime "updated_at", null: false
     t.index ["shop_id"], name: "index_favorites_on_shop_id"
     t.index ["user_id"], name: "index_favorites_on_user_id"
+  end
+
+  create_table "genders", charset: "utf8", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "prefectures", charset: "utf8", force: :cascade do |t|
@@ -49,7 +54,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_07_01_092640) do
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.integer "age_id"
-    t.string "gender"
+    t.integer "gender_id"
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"

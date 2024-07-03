@@ -9,13 +9,11 @@ class User < ApplicationRecord
   
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :age
+  belongs_to :gender
 
-  validates :nickname, :gender, 
+  validates :nickname,
             presence: true
             
-  validates :age_id,
-            numericality: { other_than: 1, message: 'を選択してください' }
-
   validates :password,
             presence: true, on: :create
 end

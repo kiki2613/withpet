@@ -46,7 +46,6 @@
     <div class="form-group">
       <div class='form-text-wrap'>
         <label class="form-text">年代</label>
-        <span class="indispensable">必須</span>
       </div>
       <%= f.collection_select(:age_id, Age.all, :id, :name, {}, {class: "select-box", id:"age"}) %>
     </div>
@@ -55,11 +54,7 @@
       <div class='form-text-wrap'>
         <label class="form-text">性別</label>
       </div>
-      <%= f.radio_button :gender, :male  %>
-      <%= f.label :gender, "男性" %>
-
-      <%= f.radio_button :gender, :female  %>
-      <%= f.label :gender, "女性" %>
+      <%= f.collection_select(:gender_id, Gender.all, :id, :name, {}, {class: "select-box", id:"gender"}) %>
     </div>
 
     <div class='register-btn'>
