@@ -62,5 +62,13 @@
     <div class="review-post-page">
       <%= link_to "レビューを書く", new_shop_review_path(@shop) %>
     </div>
+    <h2>レビュー一覧</h2>
+      <% @shop.reviews.each do |review| %>
+        <div class="review-all">
+          <p><strong>来店日</strong> <%= review.visit_date %></p>
+          <p><%= review.comment %></p>
+          <p><%= review.user.nickname %></p>
+        </div>
+      <% end %>
   </div>
 </div>
