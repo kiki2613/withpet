@@ -3,3 +3,9 @@
   overflow: auto;
   background-color: #f0e4de;
 }
+
+.my-favorite-none {
+  width: 50%;
+  margin: 100px auto 0;
+  text-align: center;
+}

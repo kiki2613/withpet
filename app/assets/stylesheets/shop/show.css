@@ -16,8 +16,14 @@ shop詳細ページ
   margin: 50px auto 50px;
   padding: 40px 40px 0;
   border-radius: 5px;
+  position: relative;
 }
 
+.show-favorite-btn {
+  position: absolute;
+  top: 7%;
+  right: 5%;
+}
 .show-header-text {
   margin-bottom: 30px;
   border-bottom: 1px solid #f0e4de;
@@ -42,7 +48,6 @@ shop詳細ページ
   border-radius: 5px;
 }
 
-
 .shop-info-li {
   padding: 20px;
 }
@@ -55,4 +60,3 @@ shop詳細ページ
   margin: 10px auto 30px;
   list-style: none;
 }
-
