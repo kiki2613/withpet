@@ -96,6 +96,7 @@ shop一覧
 .shop-li a {
   width: 100%;
   z-index: 1;
+  text-decoration: none;
 }
 
 .shop_image {
@@ -105,7 +106,7 @@ shop一覧
   height: 400px;
   display: block;
   object-fit: cover;
-  opacity: 60%;
+  opacity: 70%;
   border-radius: 5px;
 }
 
