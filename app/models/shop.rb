@@ -1,4 +1,5 @@
 class Shop < ApplicationRecord
+  has_many :reviews
   has_many :favorites
   has_many :favorited_by_users, through: :favorites, source: :user
 
