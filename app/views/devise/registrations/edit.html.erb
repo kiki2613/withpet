@@ -40,11 +40,7 @@
       <div class='form-text-wrap'>
         <label class="form-text">性別</label>
       </div>
-      <%= f.radio_button :gender, :male  %>
-      <%= f.label :gender, "男性" %>
-
-      <%= f.radio_button :gender, :female  %>
-      <%= f.label :gender, "女性" %>
+      <%= f.collection_select(:gender_id, Gender.all, :id, :name, {}, {class: "select-box", id:"gender"}) %>
     </div>
 
     <div class='register-btn'>

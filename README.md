@@ -17,7 +17,7 @@
 - has_many :favorites
 
 
-## cafesテーブル
+## shopsテーブル
 
 | Column        | Type     | Options         |
 |---------------|----------|-----------------|
@@ -32,6 +32,7 @@
 ### association
 
 - has_many :reviews
+- has_many :favorites
 
 
 ## reviewsテーブル
@@ -39,7 +40,7 @@
 | Column     | Type       | Options         |
 |------------|------------|-----------------|
 | user_id    | references | null: false, foreign_key: true |
-| cafe_id    | references | null: false, foreign_key: true |
+| shop_id    | references | null: false, foreign_key: true |
 | visit_date | Date       | null: false     |
 | comment    | text       | null: false     |
 
@@ -48,7 +49,7 @@
 ### association
 
 - belongs_to :user
-- belongs_to :cafe
+- belongs_to :shop
 
 
 ## favoritesテーブル
@@ -56,9 +57,9 @@
 | Column    | Type        | Options         |
 |-----------|-------------|-----------------|
 | user_id   | references  | null: false, foreign_key: true |
-| cafe_id   | references  | null: false, foreign_key: true |
+| shop_id   | references  | null: false, foreign_key: true |
 
 ### association
 
 - belongs_to :user
-- belongs_to :cafe
+- belongs_to :shop

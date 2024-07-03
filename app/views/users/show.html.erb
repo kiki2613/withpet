@@ -40,14 +40,19 @@
         <div class='mypage-text-wrap'>
           <div class="mypage-gender-label">性別</div>
           <div class="mypage-gender">
-            <%= @user.gender %>
+            <%= @user.gender.name %>
           </div>
         </div>
       </li>
 
     </ul>
   </div>
-  <div class="user-edit">
-    <%= link_to '編集する', edit_user_registration_path(@user.id), class: 'user-edit-btn' %>
+  <div class="my-page-btn">
+    <div class="user-edit">
+      <%= link_to '編集する', edit_user_registration_path(@user.id), class: 'user-edit-btn' %>
+    </div>
+    <div class="top-page-back">
+      <%= link_to 'もどる', root_path, class: 'back-btn' %>
+    </div>
   </div>
 </div>

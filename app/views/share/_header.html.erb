@@ -16,7 +16,7 @@
                 <%= link_to 'プロフィール', user_path(current_user.id), class: "user-info" %>
               </li>
               <li class="mypage-menu">
-                <%= link_to 'お気に入りリスト', "#", class: "myfavorite" %>
+                <%= link_to 'お気に入りリスト', favorites_path, class: "myfavorite" %>
               </li>
               <li class="mypage-menu">
                 <%= link_to '口コミ投稿リスト', "#", class: "mycomment" %>
