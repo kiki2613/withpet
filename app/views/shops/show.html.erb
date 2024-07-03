@@ -10,6 +10,9 @@
     <div class="shop-content">
       <%= image_tag @shop.image_path ,class:"shop-image-content" %>
     </div>
+    <div id="favorite-btn<%= @shop.id%>">
+      <%= render partial: "favorites/favorite", locals: { shop: @shop }%>
+    </div>
     <ul class="shop-info-li">
       <li class="shop-info">
         <div class="shop-label">所在地</div>

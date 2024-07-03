@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   get "users/show" => "users#show"
   root to: 'shops#index'
   resources :shops, only: [:index, :show] do
-    resources :favorites, only: [:create, :destroy]
+    resource :favorites, only: [:create, :destroy]
   end
   resources :users, only: :show
 end

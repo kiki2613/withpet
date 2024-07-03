@@ -1,0 +1,11 @@
+.none-favorite a {
+  color: #E25F70;
+}
+
+.favorite a, .none-favorite a {
+  text-decoration: none;
+}
+
+.favorite, .none-favorite {
+  font-size: 30px;
+}

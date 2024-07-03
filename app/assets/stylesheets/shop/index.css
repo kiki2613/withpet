@@ -86,8 +86,16 @@ shop一覧
 
 .shop_list {
   width: 70%;
-  padding-left: 100px;
-  margin-top: 100px;
+}
+
+.shop-li {
+  width: 700px;
+  margin: 100px auto 0;
+}
+
+.shop-li a {
+  width: 100%;
+  z-index: 1;
 }
 
 .shop_image {
@@ -102,40 +110,47 @@ shop一覧
 }
 
 .shop {
-  background-size: cover;
-  background-position: center;
   width: 700px;
   height: 400px;
   list-style: none;
-  padding: 10px 20px;
   margin-bottom: 30px;
   position: relative;
 }
 
-.shop_name a {
+.shop-info-top {
+  width: 95%;
+  display: flex;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+}
+
+.shop_name {
   font-size: 30px;
   font-weight: 800;
   color: #4C384A;
   text-shadow: 1px 2px  #946d91;
   text-decoration: none;
-  position: absolute;
-  top: 10%;
-  left: 5%;
 }
 
 .location {
-  display: flex;
-  justify-content: space-between;
   font-size: 12px;
   font-weight: 600;
   color: #4C384A;
-  margin-top: 300px;
+  text-shadow: 1px 0.5px  #946d91;
   position: absolute;
   bottom: 5%;
-  left: 5%;
+  right: 5%;
 }
 
-.shop_access {
-  margin-right: auto;
+.favorite-btn {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  z-index: 10;
 }
+
+
 

@@ -33,14 +33,17 @@
 
     <%# <shop一覧> %>
     <div class='shop_list'>
-      <ul>
+      <ul class='shop-li'>
         <% @shops.each do |shop| %>
           <%= link_to shop_path(shop.id) do %>
             <li class='shop'>
               <%= image_tag shop.image_path, class: "shop_image" %>
               <h2 class='shop_name'>
-                <%= link_to shop.name, "#" %>
+                <%= shop.name %>
               </h2>
+              <div class='favorite-btn', id="favorite-btn<%= shop.id%>">
+                <%= render partial: "favorites/favorite", locals: { shop: shop }%>
+              </div>
               <div class='location'>
                 <p class='shop_address'>
                   <%= shop.address %>
@@ -49,12 +52,7 @@
                   アクセス： <%= shop.nearest_station %>から徒歩 <%= shop.time_to_station %>分
                 </p>
               </div>
-              <div id="favorite-btn<%= shop.id%>">
-                <% if user_signed_in? && shop.liked_by?(current_user) %>
-                  <%= link_to "いいね済", shop_favorites_path(shop.id), data: { turbo_method: :delete }, class: "shop_favorite" %>
-                <% else %>
-                  <%= link_to "いいねする", shop_favorites_path(shop.id), data: { turbo_method: :post }, class: "shop_favorite" %>
-                <% end %>
+              
             </li>
           <% end %>
         <% end %>

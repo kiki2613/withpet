@@ -8,7 +8,7 @@ class Shop < ApplicationRecord
     ["address", "nearest_station"]
   end
 
-  def liked_by?(user)
-    likes.where(user_id: user.id).exists?
+  def favorited_by?(user)
+    favorites.where(user_id: user.id).exists?
   end
 end
