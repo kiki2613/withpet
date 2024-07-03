@@ -6,11 +6,11 @@
       <h2 class="shop-name-content">
         <%= @shop.name %>
       </h2>
-      <% if user_signed_in? %>
-        <div class="show-favorite-btn" id="favorite-btn<%= @shop.id%>">
+      <div class="show-favorite-btn" id="favorite-btn<%= @shop.id%>">
+        <% if user_signed_in? %>
           <%= render partial: "favorites/favorite", locals: { shop: @shop }%>
-        </div>
-      <% end %>
+        <% end %>
+      </div>
     </div>
     <div class="shop-content">
       <%= image_tag @shop.image_path ,class:"shop-image-content" %>
@@ -65,6 +65,7 @@
     <h2>レビュー一覧</h2>
       <% @shop.reviews.each do |review| %>
         <div class="review-all">
+          <%= image_tag review.image.variant(resize: '300x300') if review.image.attached? %>
           <p><strong>来店日</strong> <%= review.visit_date %></p>
           <p><%= review.comment %></p>
           <p><%= review.user.nickname %></p>

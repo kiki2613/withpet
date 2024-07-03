@@ -1,6 +1,7 @@
 <h1>新しいレビューを投稿する</h1>
 
 <%= form_with(model: [@shop, @review], local: true) do |f| %>
+  <%= f.file_field :image, id:"item-image" %>
   <div class="field">
     <div class='input-visit-wrap'>
       <%= raw sprintf(
