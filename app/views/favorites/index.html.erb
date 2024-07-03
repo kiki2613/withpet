@@ -7,17 +7,19 @@
   <div class="my-favorite-list">
     <ul class="shop-li">
       <% @favorited_shops.each do |shop| %>
-        <%= link_to shop_path(shop.id) do %>
-          <li class="shop">
+        <li class="shop">
+          <%= link_to shop_path(shop.id) do %>
             <%= image_tag shop.image_path, class: "shop_image" %>
-            <div class="shop-info-top">
-              <h2 class='shop_name'>
-                <%= shop.name %>
-              </h2>
-              <div class='favorite-btn', id="favorite-btn<%= shop.id%>">
-                <%= render partial: "favorites/favorite", locals: { shop: shop }%>
-              </div>
+          <div class="shop-info-top">
+            <h2 class='shop_name'>
+              <%= shop.name %>
+            </h2>
+            <% end %>
+            <div class='favorite-btn', id="favorite-btn<%= shop.id%>">
+              <%= render partial: "favorites/favorite", locals: { shop: shop }%>
             </div>
+          </div>
+          <%= link_to shop_path(shop.id) do %>
             <div class='location'>
               <p class='shop_address'>
                 <%= shop.address %>
@@ -26,8 +28,8 @@
                 アクセス： <%= shop.nearest_station %>から徒歩 <%= shop.time_to_station %>分
               </p>
             </div>
-          </li>
-        <% end %>
+          <% end %>
+        </li>
       <% end %>
     </ul>
   </div>
