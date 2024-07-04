@@ -7,7 +7,7 @@
     </h2>
     <% end %>
     <% if user_signed_in? %>
-      <div class='favorite-btn', id="favorite-btn<%= shop.id%>">
+      <div class='favorite-btn', id="favorite-btn<%= shop.id %>">
         <%= render partial: "favorites/favorite", locals: { shop: shop }%>
       </div>
     <% end %>

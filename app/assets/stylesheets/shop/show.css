@@ -109,7 +109,7 @@ shop詳細ページ
   display: flex;
   flex-direction: row;
   gap: 20px;
-  background-color: #fff;
+  background-color: #bda3b977;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
