@@ -1,0 +1,19 @@
+<div class='form'>
+  <div class='search_form'>
+    <%= search_form_for @q do |f| %>
+      <div class='search_address'>
+        <div class='address_input'>
+          <%= f.search_field :address_cont, placeholder: "エリア（東京都、神奈川県）" %>
+        </div>
+      </div>
+      <div class='search_station'>
+        <div class='station_search'>
+          <%= f.search_field :nearest_station_cont, placeholder: "駅名（渋谷駅、横浜駅）" %>
+        </div>
+      </div>
+      <div class='search_btn'>
+        <%= f.submit "さがす" %>
+      </div>
+    <% end %>
+  </div>
+</div>

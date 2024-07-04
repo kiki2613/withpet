@@ -1,6 +1,9 @@
 <%= render "share/header" %>
 
 <div class="show-page">
+  <div class="attention-message">
+    <%= flash[:notice] %>
+  </div> 
   <div class="show-item">
     <div class="show-header-text">
       <h2 class="shop-name-content">
@@ -59,9 +62,17 @@
         </div>
       </li>
     </ul>
-    <div class="review-post-page">
-      <%= link_to "レビューを書く", new_shop_review_path(@shop) %>
-    </div>
+    <% if user_signed_in? %>
+      <div class="review-post-page">
+        <%= link_to "レビューを書く", new_shop_review_path(@shop) %>
+      </div>
+    <% else %>
+      <div class="review-post-none">
+        <div class="none-logo">
+          ログインしてレビューを書こう！
+        </div>
+        <%= link_to 'ログインする', new_user_session_path %>
+    <% end %>
     <h2>レビュー一覧</h2>
       <% @shop.reviews.each do |review| %>
         <div class="review-all">
