@@ -5,6 +5,9 @@
         <%= link_to 'With pet', root_path, class: "title-logo" %>
       </h1>
     </div>
+    <div class="search-area">
+      <%= render "share/search_form"%>
+    </div>
     <div class="navbar">
       <ul class="nav-lists">
         <% if user_signed_in? %>

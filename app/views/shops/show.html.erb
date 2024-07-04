@@ -62,25 +62,41 @@
         </div>
       </li>
     </ul>
+
     <% if user_signed_in? %>
-      <div class="review-post-page">
-        <%= link_to "レビューを書く", new_shop_review_path(@shop) %>
-      </div>
-    <% else %>
-      <div class="review-post-none">
-        <div class="none-logo">
-          ログインしてレビューを書こう！
-        </div>
-        <%= link_to 'ログインする', new_user_session_path %>
-    <% end %>
-    <h2>レビュー一覧</h2>
-      <% @shop.reviews.each do |review| %>
-        <div class="review-all">
-          <%= image_tag review.image.variant(resize: '300x300') if review.image.attached? %>
-          <p><strong>来店日</strong> <%= review.visit_date %></p>
-          <p><%= review.comment %></p>
-          <p><%= review.user.nickname %></p>
+  <div class="review-post-page">
+    <%= link_to "レビューを書く", new_shop_review_path(@shop), class: "review-button" %>
+  </div>
+<% else %>
+  <div class="review-post-none">
+    <div class="none-logo">
+      ログインしてレビューを書こう！
+    </div>
+    <%= link_to 'ログインする', new_user_session_path, class: "login-button" %>
+  </div>
+<% end %>
+    <h2 class="reviews-title">みんなのReview</h2>
+    <div class="reviews-container">
+      <% if @shop.reviews.present? %>
+        <% @shop.reviews.each do |review| %>
+          <div class="review-item">
+            <% if review.image.attached? %>
+              <div class="review-image">
+                <%= image_tag review.image.variant(resize: '300x300') %>
+              </div>
+            <% end %>
+            <div class="review-content">
+              <p class="review-date"><strong>来店日:</strong> <%= review.visit_date %></p>
+              <p class="review-comment"><%= review.comment %></p>
+              <p class="review-user"><%= review.user.nickname %></p>
+            </div>
+          </div>
+        <% end %>
+      <% else %>
+        <div class="none-reviews">
+          レビューはまだありません。
         </div>
       <% end %>
+      </div>
   </div>
 </div>

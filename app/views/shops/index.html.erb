@@ -2,12 +2,6 @@
 
 <div class='main'>
   <div class='top-page'>
-    <%# <検索フォーム> %>
-    <%= render "share/search_form" %>
-    <%# <検索フォーム> %>
-
-
-    <%# <shop一覧> %>
     <div class='shop_list'>
       <ul class='shop-li'>
         <% @shops.each do |shop| %>
@@ -15,6 +9,5 @@
         <% end %>
       </ul>
     </div>
-    <%# <shop一覧> %>
   </div>
 </div>
