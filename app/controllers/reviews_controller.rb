@@ -1,6 +1,6 @@
 class ReviewsController < ApplicationController
   before_action :authenticate_user!
-  before_action :find_shop, only: [:new, :create]
+  before_action :find_shop, except: :index
 
   def new
     @review = @shop.reviews.new
@@ -27,6 +27,17 @@ class ReviewsController < ApplicationController
 
   def index
     @reviewed_shops = current_user.reviewed_shops
+  end
+
+  def destroy
+    @review = Review.find(@shop)
+    if @review.destroy
+      flash[:notice] = "レビューを削除しました"
+      redirect_to root_path
+    else
+      flash[:notice] = "問題が起きて削除できませんでした"
+      redirect_to shop_path(@shop)
+    end
   end
 
   private
