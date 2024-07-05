@@ -4,22 +4,19 @@ class ReviewsController < ApplicationController
 
   def new
     @review = @shop.reviews.new
+    @review.shop_id = @shop.id
+    review_count = Review.where(shop_id: params[:shop_id]).where(user_id: current_user.id).count
+    unless review_count < 1
+      flash[:notice] = "レビューの投稿は一度までです！"
+      redirect_to shop_path(@shop)
+    end
   end
 
   def create
     @review = @shop.reviews.new(review_params)
-    @review.shop_id = @shop.id
-    review_count = Review.where(shop_id: params[:shop_id]).where(user_id: current_user.id).count
-    
-    if @review.valid?
-      if review_count < 1
-        @review.save
-        flash[:notice] = "レビューを投稿しました"
-        redirect_to shop_path(@shop)
-      else
-        flash[:notice] = "レビューの投稿は一度までです！"
-        redirect_to shop_path(@shop)
-      end
+    if @review.save
+      flash[:notice] = "レビューを投稿しました"
+      redirect_to shop_path(@shop)
     else
       render :new, status: :unprocessable_entity
     end
