@@ -11,7 +11,7 @@ shop詳細ページ
 
 .show-item {
   width: 40%;
-  background-color: #5e465b7d;
+  background-color: #f0e4de;
   margin: 50px auto 50px;
   padding: 40px 40px 20px;
   border-radius: 5px;
@@ -24,7 +24,7 @@ shop詳細ページ
 .show-header-text {
   height: 100%;
   margin-bottom: 30px;
-  border-bottom: 1px solid #f0e4de;
+  border-bottom: 1px solid #bda3b977;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,8 +33,8 @@ shop詳細ページ
 .shop-name-content {
   font-size: 40px;
   font-weight: 600;
-  color: #fffafa;
-  text-shadow: 1.5px 2.5px #4C384A;
+  color: #4C384A;
+  text-shadow: 1.5px 2.5px #fffafa;
   padding-bottom: 20px;
 }
 
@@ -54,8 +54,8 @@ shop詳細ページ
 .shop-info {
   font-size: 20px;
   font-weight: 600;
-  color: #fffafa;
-  text-shadow: 1px 2px #4C384A;
+  color: #4C384A;
+  text-shadow: 1.5px 2.5px #fffafa;
   margin: 10px auto 30px;
   list-style: none;
 }
@@ -88,9 +88,9 @@ shop詳細ページ
   text-align: center;
   font-size: 30px;
   margin-top: 20px;
-  color: #fffafa;
-  text-shadow: 2px 3px #4C384A;
-  border-bottom: 1px solid #fffafa;
+  color: #4C384A;
+  text-shadow: 1.5px 2.5px #fffafa;
+  border-bottom: 1px solid #bda3b977;
   letter-spacing: 3px;
 }
 
