@@ -1,7 +1,5 @@
-<%= render "share/header" %>
-
 <div class="mypage-area">
-  <div class='mypage-wrap'>
+  <div class='mypage-container'>
     <div class='mypage-header'>
       <h1 class='mypage-header-text'>
         <div class="mypage-text">Profile</div>
@@ -49,10 +47,10 @@
   </div>
   <div class="my-page-btn">
     <div class="user-edit">
-      <%= link_to '編集する', edit_user_registration_path(@user.id), class: 'user-edit-btn' %>
+      <%= link_to '編集する', edit_user_registration_path(@user.id), class: 'user-edit-button' %>
     </div>
     <div class="top-page-back">
-      <%= link_to 'もどる', root_path, class: 'back-btn' %>
+      <%= link_to 'もどる', root_path, class: 'back-button' %>
     </div>
   </div>
 </div>

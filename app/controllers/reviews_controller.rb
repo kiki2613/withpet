@@ -20,6 +20,7 @@ class ReviewsController < ApplicationController
       flash[:notice] = "レビューを投稿しました"
       redirect_to shop_path(@shop)
     else
+      flash.now[:notice] = "問題が起きて投稿できませんでした"
       render :new, status: :unprocessable_entity
     end
   end
@@ -34,7 +35,7 @@ class ReviewsController < ApplicationController
       flash[:notice] = "レビューを削除しました"
       redirect_to shop_path(@shop)
     else
-      flash[:notice] = "問題が起きて削除できませんでした"
+      flash.now[:notice] = "問題が起きて削除できませんでした"
       redirect_to shop_path(@shop)
     end
   end
@@ -47,6 +48,7 @@ class ReviewsController < ApplicationController
       flash[:notice] = "レビューを編集しました"
       redirect_to shop_path(@shop)
     else
+      flash.now[:notice] = "問題が起きて編集できませんでした"
       render :edit, status: :unprocessable_entity
     end
   end

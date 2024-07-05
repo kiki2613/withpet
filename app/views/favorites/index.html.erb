@@ -13,11 +13,11 @@
       </ul>
     <% else %>
       <div class="my-favorite-none">
-        <div class="my-favorite-logo">
+        <div class="none-favorite-logo">
           お気に入りの店舗を見つけよう！
         </div>
         <div class="search-back">
-          <%= link_to "いますぐさがす", root_path %>
+          <%= link_to "いますぐさがす", root_path, class: "search-back-button" %>
         </div>
       </div>
     <% end %>

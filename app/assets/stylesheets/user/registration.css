@@ -12,25 +12,26 @@
   justify-content: center;
 }
 
-.form-wrap {
+.form-container {
   width: 50%;
   height: 80%;
   background-color: #f0e4de;
-  padding-bottom: 70px;
-  border-radius: 5px;
+  padding-bottom: 50px;
 }
 
 .form-header {
   width: 100%;
-  height: 120px;
+  height: 100px;
   text-align: center;
   font-size: 22px;
+  border-bottom: 1px solid #805d7c;
 }
 
 .form-header-text {
-  line-height: 100px;
-  border-bottom: 1px solid #f5f5f5;
+  font-size: 40px;
+  line-height: 80px;
   font-weight: bold;
+  color: #4C384A;
 }
 
 .form-group {
@@ -53,15 +54,22 @@
 .form-text {
   font-size: 14px;
   font-weight: bold;
+  color: #4C384A;
 }
 
-.input-default {
-  width: 100%;
+.indispensable {
+  color: #fff;
+  background-color: #E25F70;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.input-default, .select-box {
   margin-top: 5px;
-  height: 48px;
+  height: 45px;
   padding: 10px 16px 8px;
   border-radius: 4px;
-  border: 1px solid #ccc;
+  border: 1px solid #805d7c;
   background: #fff;
   font-size: 16px;
   resize: none;
@@ -86,35 +94,15 @@
   display: contents;
 }
 
-
-.form-bottom-text {
-  font-size: 15px;
-  margin-top: 10px;
-  text-align: center;
-}
-
-.form-bottom-text:last-child {
-  margin: 0;
-  padding-bottom: 50px;
-}
-
 .form-bottom-text>span {
   color: #0099e8;
   cursor: pointer;
 }
 
 .register-btn {
-  width: 50%;
-  margin: 0 auto;
+  width: 100px;
+  margin: 30px auto 0;
 }
 
-.register--btn {
-  width: 60%;
-  background: #ea352d;
-  border: 1px solid #ea352d;
-  color: #fff;
-  line-height: 48px;
-  font-size: 14px;
-  cursor: pointer;
-}
+
 

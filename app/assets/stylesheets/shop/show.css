@@ -4,17 +4,15 @@ shop詳細ページ
 
 .show-page {
   height: 100vh;
-  padding-top: 50px;
+  padding: 50px 0 50px;
   overflow: auto;
   position: relative;
 }
 
-.show-item {
+.show-container {
   width: 40%;
-  background-color: #f0e4de;
   margin: 50px auto 50px;
   padding: 40px 40px 20px;
-  border-radius: 5px;
 }
 
 .show-favorite-btn {
@@ -205,4 +203,26 @@ shop詳細ページ
 
 .more_list li a:hover {
   color: #f58f9c;
+}
+
+/* もどるボタン */
+.top-back-link {
+  width: 140px;
+  margin: 0 auto;
+}
+
+.top-back-button {
+  width: 100px;
+}
+
+/* *******************************************
+通知
+******************************************* */
+
+.attention-message {
+  width: 300px;
+  margin: 0 auto;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fffafa;
 }

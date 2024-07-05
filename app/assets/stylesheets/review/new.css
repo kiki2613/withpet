@@ -1,3 +1,5 @@
+/* レビュー編集画面にも適用してます */
+
 .review-form-page {
   display: flex;
   justify-content: center;
@@ -7,10 +9,7 @@
 }
 
 .review-form-container {
-  background-color: #ffffff;
   padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 600px;
   text-align: center;
@@ -20,59 +19,76 @@
 }
 
 .review-form-container h1 {
-  margin-bottom: 20px;
-  color: #333;
-  border-bottom: 1px solid #fffafa;
+  margin-bottom: 30px;
+  color: #4C384A;
+  border-bottom: 1px solid #805d7c;
 }
 
 .field {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .form-control {
   width: 100%;
   padding: 10px;
   font-size: 16px;
-  border: 1px solid #ccc;
+  border: 1px solid #805d7c;
   border-radius: 4px;
   box-sizing: border-box;
 }
 
 .input-visit-wrap {
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
+.visit-label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #4C384A;
+  margin-right: 20px;
+}
+
 .input-visit-wrap p {
-  margin: 0 5px;
+  margin: 5px;
   font-size: 16px;
 }
 
-.btn-primary {
-  background-color: #E25F70;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  font-size: 16px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.btn-primary:hover {
-  background-color: #f1a6b0;
-}
-
-.back-link {
-  margin-top: 20px;
-}
-
-.back-button {
-  color: #E25F70;
-  text-decoration: none;
+.select-visit {
+  width: auto;
+  padding: 10px;
   font-size: 14px;
 }
 
-.back-button:hover {
-  text-decoration: underline;
+.select-year {
+  width: 100px;
+}
+
+.select-visit select {
+  height: 30px;
+}
+
+.select-month {
+  width: 80px;
+}
+
+.select-day {
+  width: 60px;
+}
+
+.comment-label {
+  font-size: 20px;
+  font-weight: 600;
+  color: #4C384A;
+}
+
+.review-post-btn {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.back-link, .actions {
+  flex: 1;
+  margin: 0 auto;
 }
