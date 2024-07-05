@@ -80,18 +80,6 @@
       <% if @shop.reviews.present? %>
         <% @shop.reviews.each do |review| %>
           <div class="review-item">
-            <span><%= image_tag 'arrow_top.png' %></span>
-            <%# <ul class="more_list"> %>
-              <%# <li> %>
-                <%# <%= link_to '詳細', tweet_path(tweet.id) %> 
-              <%# </li>
-              <li> %>
-                <%# <%= link_to '編集', edit_tweet_path(tweet.id) %>
-              <%# </li>  
-              <li> %>
-                <%# <%= link_to '削除', tweet_path(tweet.id),data: {turbo_method: :delete } %>
-              <%# </li>
-            </ul> %>
             <% if review.image.attached? %>
               <div class="review-image">
                 <%= image_tag review.image.variant(resize: '300x300') %>
@@ -102,6 +90,17 @@
               <p class="review-comment"><%= review.comment %></p>
               <p class="review-user"><%= review.user.nickname %></p>
             </div>
+            <div class="more-options">
+              <%= image_tag 'arrow_top.png' %>
+            </div>
+            <ul class="more_list"> 
+              <li> 
+                <%= link_to '編集', "#" %>
+              </li>  
+              <li> 
+                <%= link_to '削除', shop_review_path(@shop,review), data: {turbo_method: :delete } %>
+              </li>
+            </ul>
           </div>
         <% end %>
       <% else %>
