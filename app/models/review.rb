@@ -1,8 +1,8 @@
 class Review < ApplicationRecord
-  belongs_to :user
-  belongs_to :shop
+  belongs_to       :user
+  belongs_to       :shop
   has_one_attached :image
 
-  validates :visit_date, :comment,
+  validates :visit_date, :comment, :image,
             presence: true
 end
