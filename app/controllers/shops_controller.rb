@@ -1,5 +1,4 @@
 class ShopsController < ApplicationController
-
   def index
     @shops = Shop.all
     search
@@ -7,6 +6,8 @@ class ShopsController < ApplicationController
 
   def show
     @shop = Shop.find(params[:id])
+    @review = Review.new
+    @reviews = @shop.reviews.all
   end
 
   private

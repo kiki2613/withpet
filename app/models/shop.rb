@@ -1,5 +1,7 @@
 class Shop < ApplicationRecord
-  has_many :favorites
+  has_many :reviews,   dependent: :destroy
+  has_many :favorites, dependent: :destroy
+  has_many :reviewed_by_users,  through: :reviews,   source: :user
   has_many :favorited_by_users, through: :favorites, source: :user
 
   extend ActiveHash::Associations::ActiveRecordExtensions

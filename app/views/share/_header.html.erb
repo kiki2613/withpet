@@ -5,6 +5,9 @@
         <%= link_to 'With pet', root_path, class: "title-logo" %>
       </h1>
     </div>
+    <div class="search-area">
+      <%= render "share/search_form"%>
+    </div>
     <div class="navbar">
       <ul class="nav-lists">
         <% if user_signed_in? %>
@@ -19,7 +22,7 @@
                 <%= link_to 'お気に入りリスト', favorites_path, class: "myfavorite" %>
               </li>
               <li class="mypage-menu">
-                <%= link_to '口コミ投稿リスト', "#", class: "mycomment" %>
+                <%= link_to '口コミ投稿リスト', reviews_path, class: "mycomment" %>
               </li>
             </ul>
           <li class="header-li">

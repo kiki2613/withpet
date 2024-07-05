@@ -12,23 +12,23 @@ shop詳細ページ
 
 .show-item {
   width: 40%;
-  background-color: rgba(150, 132, 133, 0.8);
+  background-color: #5e465b7d;
   margin: 50px auto 50px;
-  padding: 40px 40px 0;
+  padding: 40px 40px 20px;
   border-radius: 5px;
-  position: relative;
 }
 
 .show-favorite-btn {
-  position: absolute;
-  top: 7%;
-  right: 5%;
+  margin-left: 10px;
 }
+
 .show-header-text {
+  height: 100%;
   margin-bottom: 30px;
   border-bottom: 1px solid #f0e4de;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .shop-name-content {
@@ -59,4 +59,151 @@ shop詳細ページ
   text-shadow: 1px 2px #4C384A;
   margin: 10px auto 30px;
   list-style: none;
+}
+
+/* ********************************************
+レビュー一覧
+******************************************** */
+
+/* リンクボタンの共通スタイル */
+.review-button, .login-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background-color: #E25F70;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.1s ease;
+}
+
+.review-button:hover, .login-button:hover {
+  background-color: #f1a6b0;
+}
+
+/* レビューページタイトル */
+.reviews-title {
+  text-align: center;
+  font-size: 30px;
+  margin-top: 20px;
+  color: #fffafa;
+  text-shadow: 2px 3px #4C384A;
+  border-bottom: 1px solid #fffafa;
+  letter-spacing: 3px;
+}
+
+/* レビューコンテナ */
+.reviews-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+  position: relative;
+}
+
+/* レビューアイテム */
+.review-item {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  background-color: #bda3b977;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 800px;
+  position: relative;
+}
+
+/* レビュー画像 */
+.review-image img {
+  border-radius: 10px;
+  max-width: 100%;
+  height: auto;
+}
+
+/* レビューコンテンツ */
+.review-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* レビュー日付 */
+.review-date {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 5px;
+}
+
+/* レビューコメント */
+.review-comment {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* レビューユーザー */
+.review-user {
+  font-size: 14px;
+  color: #555;
+  text-align: right;
+}
+
+.none-reviews {
+  font-size: 18px;
+  color: #fffafa;
+  text-shadow: 2px 1px #4C384A;
+}
+
+.more-options {
+  width: 30px;
+  height: 30px;
+}
+
+.more-options:hover + .more_list,
+.more_list:hover {
+  display: block;
+}
+
+.more_list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: none;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background: #f2e2cd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid #fffafa;
+  border-radius: 4px;
+  z-index: 10;
+}
+
+.more_list li:hover {
+  background-color: #f3efea;
+}
+
+.more_list li {
+  padding: 10px;
+  border-bottom: 1px solid #fffafa;
+}
+
+.more_list li:last-child {
+  border-bottom: none;
+}
+
+.more_list li a {
+  text-decoration: none;
+  color: #E25F70;
+}
+
+.more_list li a:hover {
+  color: #f58f9c;
 }

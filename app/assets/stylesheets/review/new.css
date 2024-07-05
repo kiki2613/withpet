@@ -1,0 +1,79 @@
+.review-form-page {
+  background-color:  #f0e4de;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.review-form-container {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  transform: translateY(-50%);
+  top: 50%;
+  position: absolute;
+}
+
+.review-form-container h1 {
+  margin-bottom: 20px;
+  color: #333;
+  border-bottom: 1px solid #fffafa;
+}
+
+.field {
+  margin-bottom: 15px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.input-visit-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.input-visit-wrap p {
+  margin: 0 5px;
+  font-size: 16px;
+}
+
+.btn-primary {
+  background-color: #E25F70;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #f1a6b0;
+}
+
+.back-link {
+  margin-top: 20px;
+}
+
+.back-button {
+  color: #E25F70;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.back-button:hover {
+  text-decoration: underline;
+}

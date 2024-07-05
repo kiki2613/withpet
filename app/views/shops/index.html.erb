@@ -2,36 +2,6 @@
 
 <div class='main'>
   <div class='top-page'>
-    <%# <検索フォーム> %>
-    <div class='form'>
-      <div class='search_form'>
-        <%= search_form_for @q do |f| %>
-          <div class='search_address'>
-            <div class='address_label'>
-              <%= f.label :address_cont, "地域からさがす" %>
-            </div>
-            <div class='address_input'>
-              <%= f.search_field :address_cont, placeholder: "東京都、神奈川県etc..." %>
-            </div>
-          </div>
-          <div class='search_station'>
-            <div class='station_label'>
-              <%= f.label :nearest_station_cont, "駅からさがす" %>
-            </div>
-            <div class='station_search'>
-              <%= f.search_field :nearest_station_cont, placeholder: "渋谷駅、横浜駅etc..." %>
-            </div>
-          </div>
-          <div class='search_btn'>
-            <%= f.submit "さがす" %>
-          </div>
-        <% end %>
-      </div>
-    </div>
-    <%# <検索フォーム> %>
-
-
-    <%# <shop一覧> %>
     <div class='shop_list'>
       <ul class='shop-li'>
         <% @shops.each do |shop| %>
@@ -39,6 +9,5 @@
         <% end %>
       </ul>
     </div>
-    <%# <shop一覧> %>
   </div>
 </div>

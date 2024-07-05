@@ -4,7 +4,9 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_many :favorites
+  has_many :reviews,   dependent: :destroy
+  has_many :favorites, dependent: :destroy
+  has_many :reviewed_shops,  through: :reviews,   source: :shop
   has_many :favorited_shops, through: :favorites, source: :shop
   
   extend ActiveHash::Associations::ActiveRecordExtensions

@@ -1,0 +1,25 @@
+<%= render "share/header" %>
+
+<div class="my-favorite-page">
+  <div class="my-favorite-logo">
+    レビュー投稿リスト
+  </div>
+  <div class="my-favorite-list">
+    <% if @reviewed_shops.present? %>
+      <ul class="shop-li">
+        <% @reviewed_shops.each do |shop| %>
+          <%= render partial: 'share/shop_info', locals: { shop: shop } %>
+        <% end %>
+      </ul>
+    <% else %>
+      <div class="my-favorite-none">
+        <div class="my-favorite-logo">
+          来店したことのあるお店にレビューを書こう！
+        </div>
+        <div class="search-back">
+          <%= link_to "いますぐさがす", root_path %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
