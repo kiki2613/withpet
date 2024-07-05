@@ -8,8 +8,7 @@
 | email              | string  | null: false, unique: true  |
 | encrypted_password | string  | null: false  |
 | age_id             | integer |              |
-| gender             | string  |              |
-| prefecture_id      | integer |              |
+| gender_id          | integer |              |
 
 ### association
 
@@ -19,15 +18,18 @@
 
 ## shopsテーブル
 
-| Column        | Type     | Options         |
-|---------------|----------|-----------------|
-| name          | string   | null: false     |
-| address       | string   | null: false     |
-| image         | text     | null: false     |
-| phone_number  | string   |                 |
-| opening_times | string   |                 |
-| closing_days  | string   |                 |
-| prefecture_id | integer  | null: false     |
+| Column          | Type     | Options         |
+|-----------------|----------|-----------------|
+| name            | string   | null: false     |
+| address         | string   | null: false     |
+| nearest_station | text     | null: false     |
+| image_path      | string   | null: false     |
+| time_to_station | integer  |                 |
+| phone_number    | string   |                 |
+| opening_times   | string   |                 |
+| closing_days    | string   |                 |
+| attention       | text     |                 |
+
 
 ### association
 
