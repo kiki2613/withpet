@@ -62,17 +62,17 @@
     </ul>
 
     <% if user_signed_in? %>
-  <div class="review-post-page">
-    <%= link_to "レビューを書く", new_shop_review_path(@shop), class: "review-button" %>
-  </div>
-<% else %>
-  <div class="review-post-none">
-    <div class="none-logo">
-      ログインしてレビューを書こう！
-    </div>
-    <%= link_to 'ログインする', new_user_session_path, class: "login-button" %>
-  </div>
-<% end %>
+      <div class="review-post-page">
+        <%= link_to "レビューを書く", new_shop_review_path(@shop), class: "review-button" %>
+      </div>
+    <% else %>
+      <div class="review-post-none">
+        <div class="none-logo">
+          ログインしてレビューを書こう！
+        </div>
+        <%= link_to 'ログインする', new_user_session_path, class: "login-button" %>
+      </div>
+    <% end %>
     <h2 class="reviews-title">みんなのReview</h2>
     <div class="reviews-container">
       <% if @shop.reviews.present? %>
@@ -93,10 +93,10 @@
             </div>
             <ul class="more_list"> 
               <li> 
-                <%= link_to '編集', "#" %>
+                <%= link_to '編集', edit_shop_review_path(@shop, review) %>
               </li>  
               <li> 
-                <%= link_to '削除', shop_review_path(@shop,review), data: {turbo_method: :delete } %>
+                <%= link_to '削除', shop_review_path(@shop, review), data: {turbo_method: :delete } %>
               </li>
             </ul>
           </div>

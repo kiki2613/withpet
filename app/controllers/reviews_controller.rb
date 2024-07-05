@@ -1,6 +1,8 @@
 class ReviewsController < ApplicationController
   before_action :authenticate_user!, except: :index
-  before_action :find_shop, except: :index
+  before_action :find_shop,          except: :index
+  before_action :find_review,        only:   [:destroy, :edit, :update]
+  before_action :moved_shop_page,    only:   [:destroy, :edit]
 
   def new
     @review = @shop.reviews.new
@@ -37,10 +39,32 @@ class ReviewsController < ApplicationController
     end
   end
 
+  def edit
+  end
+
+  def update
+    if @review.update(review_params)
+      flash[:notice] = "レビューを編集しました"
+      redirect_to shop_path(@shop)
+    else
+      render :edit, status: :unprocessable_entity
+    end
+  end
+
   private
 
   def find_shop
     @shop = Shop.find(params[:shop_id])
+  end
+
+  def find_review
+    @review = Review.find(params[:id])
+  end
+
+  def moved_shop_page
+    unless current_user.id == @review.user.id
+      redirect_to shop_path(@shop)
+    end
   end
 
   def review_params

@@ -5,8 +5,8 @@ Rails.application.routes.draw do
   get "users/show" => "users#show"
   
   resources :shops, only: [:index, :show] do
-    resource  :favorites, only: [:create, :destroy, :index]
-    resources :reviews,   only:  [:create, :new, :index, :destroy, :edit, :update]
+    resource  :favorites, only: [:create, :destroy,]
+    resources :reviews,   only: [:create, :destroy, :new, :edit, :update]
   end
 
   resources :users,     only: :show
