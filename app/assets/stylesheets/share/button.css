@@ -1,0 +1,45 @@
+/* sign-up, loginボタン */
+
+a.btn--pink.btn--cubic {
+  border-bottom: 5px solid #E25F70;
+  width: 100px;
+  background-color: #E25F70;
+}
+
+a.btn--pink.btn--cubic:hover {
+  margin-top: 3px;
+  border-bottom: 2px solid #f1a6b0;
+}
+
+a.btn--radius {
+  border-radius: 100vh;
+}
+
+.fa-position-right {
+  position: absolute;
+  top: calc(50% - .5em);
+  right: 1rem;
+}
+
+/* もどるボタン */
+
+a.btn--orange {
+  background-color: #E25F70;
+}
+
+a.btn--orange:hover {
+  background: #f1a6b0;
+}
+
+a.btn--shadow {
+  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+a.btn--circle {
+  border-radius: 50%;
+  line-height: 40px;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+}

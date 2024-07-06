@@ -1,171 +1,196 @@
 /* ***********************************************************
-shop詳細ページ
+全体設定
 *********************************************************** */
 
-.show-page {
+.show-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   height: 100vh;
-  padding: 50px 0 50px;
-  overflow: auto;
-  position: relative;
+  margin: 0;
 }
+
+.show-page {
+  background-color: #FFFFFF;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  height: 80vh;
+  width: 90%;
+}
+
+/* ***********************************************************
+左側のコンテンツ
+*********************************************************** */
 
 .show-container {
   width: 40%;
-  margin: 50px auto 50px;
-  padding: 40px 40px 20px;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.reviews-wrap {
+  margin-top: 40px;
+}
+
+.show-header-text {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.shop-name-content {
+  font-size: 35px;
+  font-weight: bold;
+  color: #874E4C;
+  text-shadow: 1px 1px #EABCAC;
+}
+
+.icon {
+  display: flex;
+  justify-content: end;
+  align-items: center;
 }
 
 .show-favorite-btn {
   margin-left: 10px;
 }
 
-.show-header-text {
-  height: 100%;
-  margin-bottom: 30px;
-  border-bottom: 1px solid #bda3b977;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.show-review-btn {
+  margin-left: 10px;
 }
 
-.shop-name-content {
-  font-size: 40px;
-  font-weight: 600;
-  color: #4C384A;
-  text-shadow: 1.5px 2.5px #fffafa;
-  padding-bottom: 20px;
+.show-review-btn:hover .hidden {
+  display: block;
+}
+
+.shop-content {
+  margin-bottom: 20px;
 }
 
 .shop-image-content {
-  width: 550px;
-  height: 350px;
-  margin: 0 auto 30px;
-  display: block;
-  object-fit: cover;
-  border-radius: 5px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.top-back-link {
+  margin-top: 120px;
+}
+
+.top-back-btn {
+  height: 50px;
+}
+
+/* ***********************************************************
+右側のコンテンツ
+*********************************************************** */
+
+.show-details {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.shop-details {
+  padding: 20px;
+  margin-top: 40px;
+}
+
+.shop-info-logo {
+  font-weight: bold;
+  color: #E2B091;
+  font-size: 20px;
+  margin-bottom: 10px;
 }
 
 .shop-info-li {
-  padding: 20px;
-}
-
-.shop-info {
-  font-size: 20px;
-  font-weight: 600;
-  color: #4C384A;
-  text-shadow: 1.5px 2.5px #fffafa;
-  margin: 10px auto 30px;
+  padding: 0;
+  margin: 0;
   list-style: none;
 }
 
-/* ********************************************
-レビュー一覧
-******************************************** */
+.shop-info {
+  margin-bottom: 20px;
+}
 
-/* リンクボタンの共通スタイル */
-.review-button, .login-button {
-  display: inline-block;
-  padding: 10px 20px;
-  font-size: 16px;
+.shop-label {
   font-weight: bold;
-  color: white;
-  background-color: #E25F70;
-  border: none;
-  border-radius: 5px;
-  text-decoration: none;
-  text-align: center;
-  transition: background-color 0.1s ease;
+  color: #E25F70; /* ボタンの色 */
 }
 
-.review-button:hover, .login-button:hover {
-  background-color: #f1a6b0;
+.shop-address, .shop-access, .shop-tell, .shop-opening, .shop-close, .shop-attention {
+  color: #874E4C;
 }
 
-/* レビューページタイトル */
+
+.reviews-container {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
 .reviews-title {
   text-align: center;
-  font-size: 30px;
-  margin-top: 20px;
-  color: #4C384A;
-  text-shadow: 1.5px 2.5px #fffafa;
-  border-bottom: 1px solid #bda3b977;
-  letter-spacing: 3px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #E25F70; /* ボタンの色 */
+  margin-bottom: 20px;
 }
 
-/* レビューコンテナ */
-.reviews-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  margin-top: 20px;
-  position: relative;
-}
-
-/* レビューアイテム */
 .review-item {
   display: flex;
   flex-direction: row;
   gap: 20px;
-  background-color: #bda3b977;
+  background-color: #EABCAC;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  width: 80%;
-  max-width: 800px;
+  margin-bottom: 20px;
   position: relative;
 }
 
-/* レビュー画像 */
 .review-image img {
-  border-radius: 10px;
   max-width: 100%;
   height: auto;
+  border-radius: 10px;
 }
 
-/* レビューコンテンツ */
 .review-content {
-  width: 100%;
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-/* レビュー日付 */
 .review-date {
   font-size: 14px;
-  color: #888;
+  color: #555;
   margin-bottom: 5px;
 }
 
-/* レビューコメント */
 .review-comment {
   font-size: 16px;
   color: #333;
   margin-bottom: 10px;
 }
 
-/* レビューユーザー */
 .review-user {
   font-size: 14px;
-  color: #555;
+  color: #777;
   text-align: right;
 }
 
 .none-reviews {
   font-size: 18px;
-  color: #fffafa;
-  text-shadow: 2px 1px #4C384A;
+  color: #32485C;
 }
 
 .more-options {
   width: 30px;
   height: 30px;
-}
-
-.more-options:hover + .more_list,
-.more_list:hover {
-  display: block;
 }
 
 .more_list {
@@ -176,20 +201,19 @@ shop詳細ページ
   position: absolute;
   top: 40px;
   right: 0;
-  background: #f2e2cd;
+  background: #FFFFFF;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border: 1px solid #fffafa;
   border-radius: 4px;
   z-index: 10;
 }
 
-.more_list li:hover {
-  background-color: #f3efea;
+.review-item:hover .more_list {
+  display: block;
 }
 
 .more_list li {
   padding: 10px;
-  border-bottom: 1px solid #fffafa;
+  border-bottom: 1px solid #E2B091;
 }
 
 .more_list li:last-child {
@@ -198,31 +222,23 @@ shop詳細ページ
 
 .more_list li a {
   text-decoration: none;
-  color: #E25F70;
+  color: #E25F70; /* ボタンの色 */
 }
 
 .more_list li a:hover {
-  color: #f58f9c;
+  color: #C44B59;
 }
 
-/* もどるボタン */
-.top-back-link {
-  width: 140px;
-  margin: 0 auto;
-}
-
-.top-back-button {
-  width: 100px;
-}
-
-/* *******************************************
+/* ***********************************************************
 通知
-******************************************* */
+*********************************************************** */
 
 .attention-message {
   width: 300px;
   margin: 0 auto;
-  font-size: 20px;
+  padding: 10px;
+  font-size: 18px;
   font-weight: bold;
-  color: #fffafa;
+  text-align: center;
+  color: #874E4C;
 }

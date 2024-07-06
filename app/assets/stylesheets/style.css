@@ -3,12 +3,11 @@
 ********************************************************* */
 
 body {
-  font-family: 'Arial', sans-serif;
-  font-size: 14px;
-  color: #333;
-  background-color: #a78c8d;
-  margin: 0 auto;
+  background-color: #F7DFD4;
+  margin: 0;
+  font-family: Arial, sans-serif;
 }
+
 
 h1,h2,h3,h4,h5,h6,p {
   padding: 10px 0;
