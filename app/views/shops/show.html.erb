@@ -1,7 +1,9 @@
 <div class="show-wrapper">
   <div class="attention-message">
+    <%# <i class="fa-solid fa-triangle-exclamation" style="color: #e10909;"></i> %>
     <%= flash[:notice] %>
-  </div> 
+    <%# <i class="fa-solid fa-triangle-exclamation" style="color: #e10909;"></i> %>
+  </div>
   <div class="show-page">
     <div class="show-container">
       <div class="show-header-text">
@@ -11,14 +13,14 @@
       </div>
       <div class="shop-content">
         <%= image_tag @shop.image_path, class: "shop-image-content" %>
-        <% if user_signed_in? %>
-          <div class="icon">
+        <div class="icon">
+          <% if user_signed_in? %>
             <div class="show-favorite-btn" id="favorite-btn<%= @shop.id %>">
-                <%= render partial: "favorites/favorite", locals: { shop: @shop } %>
+              <%= render partial: "favorites/favorite", locals: { shop: @shop } %>
             </div>
             <div class="show-review-btn">
               <%= link_to new_shop_review_path(@shop) do %>
-                <i class="fa-regular fa-comment fa-2xl" style="color: #874e4c;"></i>
+                <i class="fa-solid fa-pen-to-square fa-2xl" style="color: #874e5c;"></i>
               <% end %>
             </div>
           <% else %>
@@ -27,29 +29,34 @@
                 ログインしてレビューを書こう！
               </div>
               <%= link_to 'ログインする', new_user_session_path, class: "login-button" %>
-          </div>
-        <% end %>
-      </div>
-    </div>
-
-    <div class="top-back-link">
-      <%= link_to root_path, class: 'btn btn--orange btn--circle btn--circle-a btn--shadow' do %>
-        <div class="top-back-btn">
-          <i class="fa-solid fa-arrow-left fa-xl" style="color: #ffffff;"></i>
+            </div>
+          <% end %>
         </div>
-      <% end %>
+        <div class="top-back-link">
+          <%= link_to root_path, class: 'btn btn--orange btn--circle btn--circle-a btn--shadow' do %>
+            <div class="top-back-btn">
+              <i class="fa-solid fa-arrow-left fa-xl" style="color: #ffffff;"></i>
+            </div>
+          <% end %>
+        </div>
+      </div>
     </div>
 
     <div class="show-details">
       <div class="shop-details">
-        <div class="shop-info-logo">
-          Shop Infomation
+        <div class="show-info-logo">
+          <div class="shop-info-icon">
+            <i class="fa-solid fa-circle-info fa-lg" style="color: #e2b091;"></i>
+          </div>
+          <div class="shop-info-logo">
+            Shop Infomation
+          </div>
         </div>
         <ul class="shop-info-li">
           <li class="shop-info">
             <div class="shop-label">所在地</div>
             <div class="shop-address">
-              <%=  @shop.address %>
+              <%= @shop.address %>
             </div>
           </li>
 
@@ -69,7 +76,7 @@
 
           <li class="shop-info">
             <div class="shop-label">営業時間</div>
-            <div class="shop-opening">  
+            <div class="shop-opening">
               <%= @shop.opening_times %>
             </div>
           </li>
@@ -90,41 +97,47 @@
         </ul>
       </div>
     </div>
-    <div class="reviews-container">
-      <div class="reviews-wrap">
+
+  <div class="reviews-container">
+    <div class="reviews-wrap">
+      <div class="reviews-logo">
         <h2 class="reviews-title">Review</h2>
-        <% if @shop.reviews.present? %>
-          <% @shop.reviews.each do |review| %>
-            <div class="review-item">
-              <% if review.image.attached? %>
-                <div class="review-image">
-                  <%= image_tag review.image.variant(resize: '300x300') %>
-                </div>
-              <% end %>
-              <div class="review-content">
+        <i class="fa-regular fa-comments fa-xl" style="color: #e25f70;"></i>
+      </div>
+      <% if @shop.reviews.present? %>
+        <% @shop.reviews.each do |review| %>
+          <div class="review-item">
+            <% if review.image.attached? %>
+              <div class="review-image">
+                <%= image_tag review.image.variant(resize: '300x300') %>
+              </div>
+            <% end %>
+            <div class="review-content">
+              <div class="review-content-top">
                 <p class="review-date"><strong>来店日:</strong> <%= review.visit_date %></p>
-                <p class="review-comment"><%= review.comment %></p>
-                <p class="review-user"><%= review.user.nickname %></p>
+                <div class="more-options">
+                  <i class="fa-solid fa-circle-chevron-down fa-lg" style="color: #ffffff;"></i>
+                  <ul class="more-list">
+                    <li>
+                      <%= link_to '編集', edit_shop_review_path(@shop, review) %>
+                    </li>
+                    <li>
+                      <%= link_to '削除', shop_review_path(@shop, review), data: {turbo_method: :delete } %>
+                    </li>
+                  </ul>
+                </div>
               </div>
-              <div class="more-options">
-                <%= image_tag 'arrow_top.png' %>
-              </div>
-              <ul class="more_list"> 
-                <li> 
-                  <%= link_to '編集', edit_shop_review_path(@shop, review) %>
-                </li>  
-                <li> 
-                  <%= link_to '削除', shop_review_path(@shop, review), data: {turbo_method: :delete } %>
-                </li>
-              </ul>
+              <p class="review-comment"><%= review.comment %></p>
+              <p class="review-user"><%= review.user.nickname %></p>
             </div>
-          <% end %>
-        <% else %>
-          <div class="none-reviews">
-            レビューはまだありません。
+            
           </div>
         <% end %>
-      </div>
+      <% else %>
+        <div class="none-reviews">
+          レビューはまだありません。
+        </div>
+      <% end %>
     </div>
   </div>
 </div>

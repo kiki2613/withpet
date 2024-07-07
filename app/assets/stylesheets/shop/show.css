@@ -99,11 +99,20 @@
   margin-top: 40px;
 }
 
+.show-info-logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
 .shop-info-logo {
   font-weight: bold;
   color: #E2B091;
   font-size: 20px;
-  margin-bottom: 10px;
+}
+
+.shop-info-icon {
+  margin-right: 5px;
 }
 
 .shop-info-li {
@@ -132,12 +141,18 @@
   overflow-y: auto;
 }
 
+.reviews-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
 .reviews-title {
-  text-align: center;
   font-size: 24px;
   font-weight: bold;
-  color: #E25F70; /* ボタンの色 */
-  margin-bottom: 20px;
+  color: #E25F70;
+  margin-right: 5px;
 }
 
 .review-item {
@@ -163,43 +178,40 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 100%;
+  white-space: normal;
+}
+
+.review-content-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
 }
 
 .review-date {
   font-size: 14px;
-  color: #555;
-  margin-bottom: 5px;
+  color: #874E4C;
 }
 
-.review-comment {
-  font-size: 16px;
-  color: #333;
-  margin-bottom: 10px;
-}
-
-.review-user {
-  font-size: 14px;
-  color: #777;
-  text-align: right;
-}
-
-.none-reviews {
-  font-size: 18px;
-  color: #32485C;
-}
 
 .more-options {
   width: 30px;
   height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
-.more_list {
+.more-list {
   list-style: none;
+  width: 55px;
   padding: 0;
   margin: 0;
   display: none;
   position: absolute;
-  top: 40px;
+  top: 28px;
   right: 0;
   background: #FFFFFF;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -207,27 +219,47 @@
   z-index: 10;
 }
 
-.review-item:hover .more_list {
+.more-options:hover .more-list {
   display: block;
 }
 
-.more_list li {
+.more-list li {
   padding: 10px;
   border-bottom: 1px solid #E2B091;
 }
 
-.more_list li:last-child {
+.more-list li:last-child {
   border-bottom: none;
 }
 
-.more_list li a {
+.more-list li a {
   text-decoration: none;
   color: #E25F70; /* ボタンの色 */
 }
 
-.more_list li a:hover {
+.more-list li a:hover {
   color: #C44B59;
 }
+
+.review-comment {
+  font-size: 16px;
+  color: #764b4a;
+  margin-bottom: 10px;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+.review-user {
+  font-size: 14px;
+  color: #874E4C;
+  text-align: right;
+}
+
+.none-reviews {
+  font-size: 18px;
+  color: #874E4C;
+}
+
 
 /* ***********************************************************
 通知
@@ -235,10 +267,11 @@
 
 .attention-message {
   width: 300px;
-  margin: 0 auto;
   padding: 10px;
   font-size: 18px;
   font-weight: bold;
-  text-align: center;
   color: #874E4C;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
