@@ -1,8 +1,11 @@
 <%= render "share/header" %>
 
 <div class="my-favorite-page">
-  <div class="my-favorite-logo">
-    レビュー投稿リスト
+  <div class="my-favorite-logo-icon">
+    <i class="fa-solid fa-pen-to-square fa-2xl" style="color: #E25F70;"></i>
+    <div class="my-favorite-logo">
+      レビュー投稿リスト
+    </div>
   </div>
   <div class="my-favorite-list">
     <% if @reviewed_shops.present? %>
