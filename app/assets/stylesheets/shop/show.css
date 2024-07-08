@@ -76,6 +76,28 @@
   border-radius: 10px;
 }
 
+.review-post-none {
+  margin-top: 5px;
+}
+
+.none-logo {
+  color: #E25F70;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.login-link {
+  color: #E25F70;
+  font-size: 15px;
+  font-weight: 600;
+  text-align: end;
+}
+
+.login-link:hover {
+  color: #EABCAC;
+  border-bottom: 1px solid #C44B59;
+}
+
 .top-back-link {
   margin-top: 90px;
 }

@@ -34,6 +34,9 @@
       <div class='register-btn'>
         <%= f.submit "ログイン", class:"register-button" %>
       </div>
+      <div class="registration-login-link">
+        <%= link_to '新規登録はこちらから', new_user_session_path, class: "login-link" %>
+      </div>
     </div>
   </div>
 <% end %>

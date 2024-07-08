@@ -1,33 +1,39 @@
 /* sign-up, loginボタン */
 
-a.btn--pink.btn--cubic {
-  border-bottom: 5px solid #E25F70;
+a.btn--header.btn--cubic {
+  border-bottom: 5px solid #cdb7ad;
   width: 100px;
-  background-color: #E25F70;
+  background-color: #F7DFD4;
 }
 
-a.btn--pink.btn--cubic:hover {
+a.btn--header.btn--cubic:hover {
   margin-top: 3px;
-  border-bottom: 2px solid #f1a6b0;
+  border-bottom: 2px solid #f8e9e2;
 }
 
 a.btn--radius {
   border-radius: 100vh;
 }
 
-.fa-position-right {
+.fa-angles-right {
   position: absolute;
-  top: calc(50% - .5em);
-  right: 1rem;
+  top: calc(50% - .2em);
+  right: 0.875em;
+  transition: transform 0.05s ease;
 }
+
+a.btn--header.btn--cubic:hover .fa-angles-right {
+  transform: translateY(0.1875em); 
+}
+
 
 /* もどるボタン */
 
-a.btn--orange {
+a.btn--back {
   background-color: #E25F70;
 }
 
-a.btn--orange:hover {
+a.btn--back:hover {
   background: #f1a6b0;
 }
 

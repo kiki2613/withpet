@@ -44,10 +44,16 @@ a {
 
 [class*="-button"]:hover {
   background-color: #f1a6b0;
+  color: white;
 }
 
 [class*="-container"] {
   background-color: #fde6c3;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover,
+.btn:focus {
+  color: inherit;
 }

@@ -1,27 +1,51 @@
 /* レビュー編集画面にも適用してます */
 
 .review-form-page {
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  overflow: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  margin: 0;
+}
+
+.review-page {
+  display: flex;
+  width: 80%;
+  height: 100%;
+}
+
+.review-shop-info {
+  width: 100%;
+}
+
+.review-shop-img {
+  width: 500px;
+  border-radius: 10px;
 }
 
 .review-form-container {
-  padding: 30px;
+  padding: 20px;
   width: 100%;
   max-width: 600px;
   text-align: center;
-  transform: translateY(-50%);
   top: 50%;
   position: absolute;
 }
 
-.review-form-container h1 {
-  margin-bottom: 30px;
-  color: #4C384A;
+.review-post-logo-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
   border-bottom: 1px solid #805d7c;
+}
+
+.review-form-container h1 {
+  font-size: 35px;
+  color: #874e5c;
+  margin-left: 10px;
 }
 
 .field {

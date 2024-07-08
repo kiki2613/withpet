@@ -97,6 +97,16 @@
   align-items: center;
 }
 
+.edit-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.edit-logo {
+  margin-right: 5px;
+}
+
 .user-edit-button,
 .back-button {
   background-color: #EABCAC;
@@ -113,4 +123,8 @@
 .user-edit-button:hover,
 .back-button:hover {
   background-color: #E2B091;
+}
+
+.user-edit-button, .back-button {
+  width: 150px;
 }

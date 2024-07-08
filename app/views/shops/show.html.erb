@@ -26,14 +26,14 @@
           <% else %>
             <div class="review-post-none">
               <div class="none-logo">
-                ログインしてレビューを書こう！
+                ログインするとお気に入り登録やレビューの投稿ができます！
               </div>
-              <%= link_to 'ログインする', new_user_session_path, class: "login-button" %>
+              <%= link_to 'ログインする', new_user_session_path, class: "login-link" %>
             </div>
           <% end %>
         </div>
         <div class="top-back-link">
-          <%= link_to root_path, class: 'btn btn--orange btn--circle btn--circle-a btn--shadow' do %>
+          <%= link_to root_path, class: 'btn btn--back btn--circle btn--circle-a btn--shadow' do %>
             <div class="top-back-btn">
               <i class="fa-solid fa-arrow-left fa-xl" style="color: #ffffff;"></i>
             </div>
@@ -109,7 +109,7 @@
           <div class="review-item">
             <div class="more-options-blank">
               <div class="more-options">
-                <% if review.user_id == current_user.id %>
+                <% if user_signed_in? && (review.user_id == current_user.id) %>
                   <i class="fa-solid fa-circle-chevron-down fa-lg" style="color: #ffffff;"></i>
                   <ul class="more-list">
                     <li>

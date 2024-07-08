@@ -31,13 +31,6 @@
 
 .navbar {
   height: 100%;
-  margin-left: 50px;
-}
-
-.header-li {
-  list-style: none;
-  text-decoration: none;
-  position: relative;
 }
 
 .nav-lists {
@@ -46,10 +39,17 @@
   align-items: center;
 }
 
+.header-li {
+  list-style: none;
+  text-decoration: none;
+  margin-right: 10px;
+  position: relative;
+}
+
 .login, .signup {
   flex: 1;
   font-size: 16px;
-  color: #fffafa;
+  color: #a78c8d;
   text-decoration: none;
   margin-right: 10px;
 }
@@ -68,18 +68,19 @@
   border-bottom: 2px solid #f2e2cd;
 }
 
+
 /* ********************************************************
 マイページのプルダウン
 ******************************************************** */
 
 .mypage-pulldown{
-  width: 140px;
+  width: 165px;
   background-color: #f2e2cd;
   border: 1px solid #fffafa;
   border-radius: 5px;
   position: absolute;
   top: 30px;
-  right: 20px;
+  right: 25px;
   padding: 0;
   margin: 0;
 }
@@ -105,20 +106,19 @@
   border-bottom: 1px solid #fffafa;
 }
 
-.user-info, .myfavorite, .mycomment {
-  font-size: 14px;
-  font-weight: 600;
-  color: #E25F70;
-  text-shadow: 0.5px 1px #fffafa;
-  text-decoration: none;
+.mypage-icon-logo {
+  display: flex;
+  align-items: center;
 }
 
-.logout {
+.user-info-logo,.myfavorite-logo,
+.mycomment-logo, .logout-logo {
   font-size: 14px;
   font-weight: 600;
   color: #E25F70;
   text-shadow: 0.5px 1px #fffafa;
   text-decoration: none;
+  margin-left: 5px;
 }
 
 .hidden {
@@ -177,4 +177,8 @@ input::placeholder {
   border-color: #f1a6b0;
   outline: 0;
   box-shadow: 0 0 8px rgba(241, 166, 176, 1);
+}
+
+.search-btn {
+  
 }
