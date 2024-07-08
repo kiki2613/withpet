@@ -1,6 +1,13 @@
 <%= form_with model: @user, url: user_session_path, class: 'registration-main', local: true do |f| %>
   <div class="form-area">
     <div class='form-container'>
+      <div class='back-link'>
+        <%= link_to root_path do %>
+          <div class="cancel-btn">
+            <i class="fa-regular fa-circle-xmark fa-2xl" style="color: #e25f70;"></i>
+          </div>
+        <% end %>
+      </div>
       <div class='form-header'>
         <h1 class='form-header-text'>
           会員情報入力
@@ -24,8 +31,8 @@
         </div>
         <%= f.password_field :password, class:"input-default", id:"password", placeholder:"" %>
       </div>
-      <div class='login-btn'>
-        <%= f.submit "Log in" ,class:"login-button" %>
+      <div class='register-btn'>
+        <%= f.submit "ログイン", class:"register-button" %>
       </div>
     </div>
   </div>

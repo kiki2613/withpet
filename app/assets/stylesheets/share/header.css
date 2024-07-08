@@ -6,16 +6,16 @@
   width: 100%;
   height: 100px;
   background-color: #a78c8d;
-  padding-left: 50px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   position: fixed;
   z-index: 100;
 }
 
 .heading {
-  width: 15%;
   height: 100%;
+  margin-left: 50px;
   display: flex;
   align-items: center;
   margin-right: 50px;
@@ -31,42 +31,55 @@
 
 .navbar {
   height: 100%;
-  margin-left: 150px;
+  margin-left: 50px;
 }
 
 .header-li {
   list-style: none;
   text-decoration: none;
   position: relative;
-  margin-bottom: 10px;
 }
 
 .nav-lists {
   height: 100%;
+  display: flex;
+  align-items: center;
 }
 
-.login, .logout, .signup, .user-nickname {
+.login, .signup {
+  flex: 1;
   font-size: 16px;
   color: #fffafa;
   text-decoration: none;
   margin-right: 10px;
 }
 
+.user-nickname {
+  font-size: 20px;
+  color: #fffafa;
+  margin-right: 60px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.nickname {
+  margin-right: 10px;
+}
 /* ********************************************************
 マイページのプルダウン
 ******************************************************** */
 
 .mypage-pulldown{
   width: 140px;
-  position: absolute;
-  right: 150px;
-  top: 80px;
   background-color: #f2e2cd;
   border: 1px solid #fffafa;
   border-radius: 5px;
   position: absolute;
-  top: 70px;
-  right: 220px;
+  top: 30px;
+  right: 20px;
+  padding: 0;
+  margin: 0;
 }
 
 .mypage-pulldown a {
@@ -85,11 +98,12 @@
 }
 
 .mypage-menu:first-child,
-.mypage-menu:nth-child(2) {
+.mypage-menu:nth-child(2),
+.mypage-menu:nth-child(3) {
   border-bottom: 1px solid #fffafa;
 }
 
-.user-info, .myfavorite {
+.user-info, .myfavorite, .mycomment {
   font-size: 14px;
   font-weight: 600;
   color: #E25F70;
@@ -97,7 +111,7 @@
   text-decoration: none;
 }
 
-.mycomment {
+.logout {
   font-size: 14px;
   font-weight: 600;
   color: #E25F70;

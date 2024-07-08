@@ -1,108 +1,118 @@
+
+.user-registration {
+  padding-top: 80px;
+}
+
 .registration-main {
-  width: 100%;
-  min-width: 800px;
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   overflow: auto;
 }
 
+/* 戻るリンク */
+.back-link {
+  text-align: end;
+  padding-top: 15px;
+  margin-right: 15px;
+}
+
+/* フォームエリア */
 .form-area {
-  width: 100%;
-  padding: 100px 0;
-  display: flex;
-  justify-content: center;
+  width: 40%;
+  margin-bottom: 20px;
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* フォームコンテナ */
 .form-container {
-  width: 50%;
-  height: 80%;
-  background-color: #f0e4de;
-  padding-bottom: 50px;
+  text-align: center;
+  /* padding: 15px 50px; */
 }
 
+/* フォームヘッダー */
 .form-header {
-  width: 100%;
-  height: 100px;
-  text-align: center;
-  font-size: 22px;
-  border-bottom: 1px solid #805d7c;
+  margin-bottom: 20px;
 }
 
 .form-header-text {
-  font-size: 40px;
-  line-height: 80px;
+  color: #874E4C;
+  font-size: 28px;
   font-weight: bold;
-  color: #4C384A;
 }
 
+/* フォームグループ */
 .form-group {
-  width: 60%;
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  padding-top: 20px;
+  margin: 0 50px 15px;
 }
 
-.form-group:first-child {
-  padding: 0;
-}
-
+/* フォームテキストラップ */
 .form-text-wrap {
-  width: 100%;
-  height: 20%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
 }
 
+/* フォームテキスト */
 .form-text {
-  font-size: 14px;
+  color: #874E4C;
   font-weight: bold;
-  color: #4C384A;
+  margin-right: 10px;
 }
 
+/* 必須マーク */
 .indispensable {
-  color: #fff;
+  color: #fffafa;
   background-color: #E25F70;
-  padding: 5px;
-  border-radius: 5px;
-}
-
-.input-default, .select-box {
-  margin-top: 5px;
-  height: 45px;
-  padding: 10px 16px 8px;
+  padding: 2px 6px;
   border-radius: 4px;
-  border: 1px solid #805d7c;
-  background: #fff;
+  margin-right: 10px;
+}
+
+/* 入力フィールド */
+.input-default {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #EABCAC;
+  border-radius: 4px;
   font-size: 16px;
-  resize: none;
+  background-color: #F7DFD4;
 }
 
+/* 情報テキスト */
 .info-text {
-  color: #888;
-  font-size: 15px;
-  margin-top: 3px;
+  color: #E2B091;
+  font-size: 12px;
+  text-align: start;
 }
 
-.form-info-header {
+/* セレクトボックス */
+.select-box {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #EABCAC;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: #F7DFD4;
+}
+
+/* 登録ボタン */
+.register-button {
+  width: 200px;
   font-weight: bold;
-}
-
-.form-info-text {
-  font-size: 15px;
-}
-
-
-.field_with_errors {
-  display: contents;
-}
-
-.form-bottom-text>span {
-  color: #0099e8;
+  letter-spacing: 2px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 15px 0 25px;
 }
 
-.register-btn {
-  width: 100px;
-  margin: 30px auto 0;
+.register-button:hover {
+  background-color: #E2B091;
 }
-
-
-
