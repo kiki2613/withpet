@@ -1,78 +1,166 @@
+/* 全体のスタイル */
 .review-form-page {
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  overflow: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  margin: 0;
+  background-color: #F7DFD4;
+}
+
+.review-page {
+  display: flex;
+  width: 80%;
+  max-width: 1200px;
+  background-color: #EABCAC;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* 軽いシャドウ */
+  overflow: hidden;
+  padding: 5px;
+}
+
+.review-shop-info {
+  flex: 1;
+  background-color: #EABCAC;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.review-shop-name {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fffafa;
+  margin-bottom: 20px;
+}
+
+.review-shop-img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  object-fit: cover;
 }
 
 .review-form-container {
-  background-color: #ffffff;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 600px;
-  text-align: center;
-  transform: translateY(-50%);
-  top: 50%;
-  position: absolute;
+  flex: 1.5;
+  padding: 20px;
+  background-color: #FFFFFF;
 }
 
-.review-form-container h1 {
+.back-link {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.cancel-btn {
+  cursor: pointer;
+}
+
+.review-post-logo-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 20px;
-  color: #333;
-  border-bottom: 1px solid #fffafa;
+}
+
+.review-post-logo-icon h1 {
+  font-size: 28px;
+  color: #874E4C;
+  margin-left: 10px;
 }
 
 .field {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+}
+
+.photo-area {
+  display: flex;
+  align-items: center;
+}
+
+.photo {
+  font-size: 16px;
+  font-weight: 600;
+  color: #874E4C;
+  margin-left: 5px;
 }
 
 .form-control {
   width: 100%;
   padding: 10px;
   font-size: 16px;
-  border: 1px solid #ccc;
+  border: 1px solid #E2B091;
   border-radius: 4px;
   box-sizing: border-box;
+  background-color: #F7DFD4;
+  color: #874E4C;
 }
 
 .input-visit-wrap {
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
 .input-visit-wrap p {
-  margin: 0 5px;
+  color: #874E4C;
+}
+
+.visit-label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #874E4C;
+  margin-right: 20px;
+}
+
+.input-visit-wrap p {
+  margin: 5px;
   font-size: 16px;
 }
 
-.btn-primary {
-  background-color: #E25F70;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  font-size: 16px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.btn-primary:hover {
-  background-color: #f1a6b0;
-}
-
-.back-link {
-  margin-top: 20px;
-}
-
-.back-button {
-  color: #E25F70;
-  text-decoration: none;
+.select-visit {
+  width: auto;
+  padding: 10px;
   font-size: 14px;
+  border: 1px solid #E2B091;
+  border-radius: 4px;
+  background-color: #F7DFD4;
+  color: #874E4C;
 }
 
-.back-button:hover {
-  text-decoration: underline;
+.select-year {
+  width: 100px;
+}
+
+.select-visit select {
+  height: 30px;
+}
+
+.select-month {
+  width: 80px;
+}
+
+.select-day {
+  width: 60px;
+}
+
+.comment-label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #874E4C;
+}
+
+.review-post-btn {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
 }

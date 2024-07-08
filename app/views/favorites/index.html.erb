@@ -1,8 +1,11 @@
 <%= render "share/header" %>
 
 <div class="my-favorite-page">
-  <div class="my-favorite-logo">
-    お気に入りリスト
+  <div class="my-favorite-logo-icon">
+    <i class="fa-solid fa-heart fa-2xl" style="color: #ec3383;"></i>
+    <div class="my-favorite-logo">
+      お気に入りリスト
+    </div>
   </div>
   <div class="my-favorite-list">
     <% if @favorited_shops.present? %>
@@ -13,11 +16,11 @@
       </ul>
     <% else %>
       <div class="my-favorite-none">
-        <div class="my-favorite-logo">
+        <div class="none-favorite-logo">
           お気に入りの店舗を見つけよう！
         </div>
         <div class="search-back">
-          <%= link_to "いますぐさがす", root_path %>
+          <%= link_to "いますぐさがす", root_path, class: "search-back-button" %>
         </div>
       </div>
     <% end %>

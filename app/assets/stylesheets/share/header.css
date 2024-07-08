@@ -6,16 +6,16 @@
   width: 100%;
   height: 100px;
   background-color: #a78c8d;
-  padding: 0 50px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   position: fixed;
   z-index: 100;
 }
 
 .heading {
-  width: 15%;
   height: 100%;
+  margin-left: 50px;
   display: flex;
   align-items: center;
   margin-right: 50px;
@@ -31,13 +31,6 @@
 
 .navbar {
   height: 100%;
-  margin-left: 30px;
-}
-
-.header-li {
-  list-style: none;
-  text-decoration: none;
-  position: relative;
 }
 
 .nav-lists {
@@ -46,38 +39,50 @@
   align-items: center;
 }
 
-.login, .logout {
-  font-size: 18px;
-  font-weight: 600;
-  color: #fffafa;
-  text-shadow: 1px 2px #4C384A;
+.header-li {
+  list-style: none;
   text-decoration: none;
+  margin-right: 10px;
+  position: relative;
 }
 
-.signup, .user-nickname {
-  font-size: 18px;
-  font-weight: 600;
-  color: #fffafa;
-  text-shadow: 2px 3px #4C384A;
+.login, .signup {
+  flex: 1;
+  font-size: 16px;
+  color: #a78c8d;
   text-decoration: none;
-  margin-right: 60px;
+  margin-right: 10px;
 }
+
+.user-nickname {
+  font-size: 20px;
+  color: #fffafa;
+  margin-right: 60px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.nickname {
+  margin-right: 10px;
+  border-bottom: 2px solid #f2e2cd;
+}
+
 
 /* ********************************************************
 マイページのプルダウン
 ******************************************************** */
 
 .mypage-pulldown{
-  width: 140px;
-  position: absolute;
-  right: 150px;
-  top: 80px;
+  width: 165px;
   background-color: #f2e2cd;
   border: 1px solid #fffafa;
   border-radius: 5px;
   position: absolute;
-  top: 70px;
-  right: 220px;
+  top: 30px;
+  right: 25px;
+  padding: 0;
+  margin: 0;
 }
 
 .mypage-pulldown a {
@@ -96,24 +101,24 @@
 }
 
 .mypage-menu:first-child,
-.mypage-menu:nth-child(2) {
+.mypage-menu:nth-child(2),
+.mypage-menu:nth-child(3) {
   border-bottom: 1px solid #fffafa;
 }
 
-.user-info, .myfavorite {
-  font-size: 14px;
-  font-weight: 600;
-  color: #E25F70;
-  text-shadow: 0.5px 1px #fffafa;
-  text-decoration: none;
+.mypage-icon-logo {
+  display: flex;
+  align-items: center;
 }
 
-.mycomment {
+.user-info-logo,.myfavorite-logo,
+.mycomment-logo, .logout-logo {
   font-size: 14px;
   font-weight: 600;
   color: #E25F70;
   text-shadow: 0.5px 1px #fffafa;
   text-decoration: none;
+  margin-left: 5px;
 }
 
 .hidden {
@@ -130,7 +135,7 @@
   padding-left: 35px;
 }
 
-.search-container {
+.search-wrap {
   max-width: 100%;
   height: 100%;
   margin: 0 auto;
@@ -155,29 +160,13 @@
 }
 
 /* テキストボックス */
-.form-control {
+.search-form-control {
   flex: 1;
   width: 100%;
   padding: 10px;
   font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 4px;
-}
-
-/* 検索ボタン */
-.btn-primary {
-  background-color: #E25F70;
-  color: white;
-  border: 1px solid #E25F70;
-  border-radius: 5px;
-  padding: 10px 20px;
-  margin-left: 10px;
-  transition: background-color 0.1s ease;
-}
-
-.btn-primary:hover {
-  background-color: #f1a6b0;
-  border-color: #f1a6b0;
 }
 
 input::placeholder {

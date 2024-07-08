@@ -1,11 +1,11 @@
-<%= render "share/header" %>
-
 <div class="mypage-area">
-  <div class='mypage-wrap'>
+  <div class='mypage-container'>
     <div class='mypage-header'>
-      <h1 class='mypage-header-text'>
-        <div class="mypage-text">Profile</div>
-      </h1>
+      <i class="fa-regular fa-user fa-xl" style="color: #e25f70;"></i>
+      <div class='mypage-header-text'>
+        Profile
+      </div>
+      
     </div>
 
     <ul class="mypage-li">
@@ -49,10 +49,17 @@
   </div>
   <div class="my-page-btn">
     <div class="user-edit">
-      <%= link_to '編集する', edit_user_registration_path(@user.id), class: 'user-edit-btn' %>
+      <%= link_to edit_user_registration_path(@user.id), class: 'user-edit-button' do %>
+        <div class="edit-icon">
+          <div class="edit-logo">
+            編集する
+          </div>
+          <i class="fa-solid fa-user-pen" style="color: #fffafa;"></i>
+        </div>
+      <% end %>
     </div>
     <div class="top-page-back">
-      <%= link_to 'もどる', root_path, class: 'back-btn' %>
+      <%= link_to 'もどる', root_path, class: 'back-button' %>
     </div>
   </div>
 </div>

@@ -3,12 +3,13 @@
 ********************************************************* */
 
 body {
-  font-family: 'Arial', sans-serif;
-  font-size: 14px;
-  color: #333;
-  background-color: #a78c8d;
-  margin: 0 auto;
+  background-color: #F7DFD4;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  padding: 0;
+  margin: 0;
 }
+
 
 h1,h2,h3,h4,h5,h6,p {
   padding: 10px 0;
@@ -18,6 +19,41 @@ h1,h2,h3,h4,h5,h6,p {
 ul,li {
   padding: 0;
   margin: 0;
+  list-style: none;
 }
 
+a {
+  text-decoration: none;
+}
 
+[class*="-button"] {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background-color: #E25F70;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.1s ease;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+[class*="-button"]:hover {
+  background-color: #f1a6b0;
+  color: white;
+}
+
+[class*="-container"] {
+  background-color: #fde6c3;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover,
+.btn:focus {
+  color: inherit;
+}

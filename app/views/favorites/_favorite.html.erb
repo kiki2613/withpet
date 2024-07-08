@@ -1,11 +1,15 @@
 <%= turbo_frame_tag dom_id(shop, :favorite) do %>
   <% if user_signed_in? && shop.favorited_by?(current_user) %>
     <div class="favorite">
-      <%= link_to "❤️", shop_favorites_path(shop.id), data: { turbo_method: :delete }, class: "shop_favorite" %>
+      <%= link_to shop_favorites_path(shop.id), data: { turbo_method: :delete }, class: "shop_favorite" do %>
+        <i class="fa-solid fa-heart" style="color: #ec3383;"></i>
+      <% end %>
     </div>
   <% else %>
     <div class="none-favorite">
-      <%= link_to "♡", shop_favorites_path(shop.id), data: { turbo_method: :post }, class: "shop_favorite" %>
+      <%= link_to shop_favorites_path(shop.id), data: { turbo_method: :post }, class: "shop_favorite" do %>
+        <i class="fa-regular fa-heart" style="color: #ec3383;"></i>
+      <% end %>
     </div>
   <% end %>
 <% end %>

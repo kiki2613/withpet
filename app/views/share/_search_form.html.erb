@@ -1,13 +1,13 @@
 <%= search_form_for @q, html: { class: 'search-form' } do |f| %>
-  <div class="search-container">
+  <div class="search-wrap">
     <div class="search-form-input">
-      <%= f.search_field :address_cont, class: 'form-control', placeholder: "エリア（東京都、神奈川県）" %>
+      <%= f.search_field :address_cont, class: 'search-form-control', placeholder: "エリア（東京都、神奈川県）" %>
     </div>
     <div class="search-form-input">
-      <%= f.search_field :nearest_station_cont, class: 'form-control', placeholder: "駅名（渋谷駅、横浜駅）" %>
+      <%= f.search_field :nearest_station_cont, class: 'search-form-control', placeholder: "駅名（渋谷駅、横浜駅）" %>
     </div>
     <div class="search-btn">
-      <%= f.submit "さがす", class: 'btn btn-primary' %>
+      <%= f.submit "さがす", class: 'search-button' %>
     </div>
   </div>
 <% end %>

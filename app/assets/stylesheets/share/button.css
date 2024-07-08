@@ -1,0 +1,51 @@
+/* sign-up, loginボタン */
+
+a.btn--header.btn--cubic {
+  border-bottom: 5px solid #cdb7ad;
+  width: 100px;
+  background-color: #F7DFD4;
+}
+
+a.btn--header.btn--cubic:hover {
+  margin-top: 3px;
+  border-bottom: 2px solid #f8e9e2;
+}
+
+a.btn--radius {
+  border-radius: 100vh;
+}
+
+.fa-angles-right {
+  position: absolute;
+  top: calc(50% - .2em);
+  right: 0.875em;
+  transition: transform 0.05s ease;
+}
+
+a.btn--header.btn--cubic:hover .fa-angles-right {
+  transform: translateY(0.1875em); 
+}
+
+
+/* もどるボタン */
+
+a.btn--back {
+  background-color: #E25F70;
+}
+
+a.btn--back:hover {
+  background: #f1a6b0;
+}
+
+a.btn--shadow {
+  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+a.btn--circle {
+  border-radius: 50%;
+  line-height: 40px;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+}
