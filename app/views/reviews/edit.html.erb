@@ -1,48 +1,73 @@
 <div class="review-form-page">
-  <div class="review-form-container">
-    <h1>レビューを投稿する</h1>
+  <div class="review-page">
+    <div class="review-shop-info">
+      <div class="review-shop-name">
+        <%= @shop.name %>
+      </div>
+      <div class="review-shop-image">
+        <%= image_tag @shop.image_path, class: "review-shop-img" %>
+      </div>
+    </div>
 
-    <%= form_with(model: [@shop, @review], local: true, html: { class: 'review-form' }) do |f| %>
-      <div class="field">
-        <%= f.file_field :image, id:"item-image", class: 'form-control' %>
+    <div class="review-form-container">
+      <div class='back-link'>
+        <%= link_to shop_path(@shop) do %>
+          <div class="cancel-btn">
+            <i class="fa-regular fa-circle-xmark fa-2xl" style="color: #e25f70;"></i>
+          </div>
+        <% end %>
+      </div>
+      <div class="review-post-logo-icon">
+        <i class="fa-solid fa-pen-to-square fa-2xl" style="color: #874e5c;"></i>
+        <h1>レビューを投稿する</h1>
       </div>
 
-      <div class="field">
-        <div class='input-visit-wrap'>
-          <div class="visit-label">来店日</div>
-           <%= raw sprintf(
-                  f.date_select(
-                    :visit_date,
-                    order: [:year, :month, :day],
-                    class:'select-visit form-control',
-                    id:"visit-date",
-                    use_month_numbers: true,
-                    prompt:'--',
-                    start_year: 2000,
-                    end_year: (Time.now.year),
-                    date_separator: '%s',
-                     html_options: {
-                      year: { class: 'select-year' },
-                      month: { class: 'select-month' },
-                      day: { class: 'select-day' }
-                    }
-                  ),
-                  "<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %>
+      <%= form_with(model: [@shop, @review], local: true, html: { class: 'review-form' }) do |f| %>
+        <div class="field">
+          <div class="photo-area">
+            <i class="fa-solid fa-camera-retro" style="color: #874e4c;"></i>
+            <div class="photo">
+              写真を選択
+            </div>
+          </div>
+          <%= f.file_field :image, id:"item-image", class: 'form-control' %>
         </div>
-      </div>
 
-      <div class="field">
-        <%= f.label :comment, "レビュー内容", class: 'comment-label' %>
-        <%= f.text_area :comment, class: 'form-control' %>
-      </div>
+        <div class="field">
+          <div class='input-visit-wrap'>
+            <div class="visit-label">来店日</div>
+            <%= raw sprintf(
+                    f.date_select(
+                      :visit_date,
+                      order: [:year, :month, :day],
+                      class:'select-visit form-control',
+                      id:"visit-date",
+                      use_month_numbers: true,
+                      prompt:'--',
+                      start_year: 2000,
+                      end_year: (Time.now.year),
+                      date_separator: '%s',
+                      html_options: {
+                        year: { class: 'select-year'},
+                        month: { class: 'select-month' },
+                        day: { class: 'select-day' }
+                      }
+                    ),
+                    "<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %>
+          </div>
+        </div>
+        
+        <div class="field">
+          <%= f.label :comment, "レビュー内容", class: 'comment-label' %>
+          <%= f.text_area :comment, class: 'form-control' %>
+        </div>
 
-      <div class="actions">
-        <%= f.submit "投稿する", class: 'review-post-button' %>
-      </div>
-    <% end %>
+        <div class="actions">
+          <%= f.submit "投稿する", class: 'review-post-button' %>
+        </div>
+      <% end %>
 
-    <div class="back-link">
-      <%= link_to 'もどる', shop_path(@shop), class: 'shop-back-button' %>
+      </div>
     </div>
   </div>
 </div>

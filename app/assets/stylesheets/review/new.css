@@ -1,5 +1,4 @@
-/* レビュー編集画面にも適用してます */
-
+/* 全体のスタイル */
 .review-form-page {
   height: 100vh;
   width: 100%;
@@ -8,30 +7,58 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #F7DFD4;
 }
 
 .review-page {
   display: flex;
   width: 80%;
-  height: 100%;
+  max-width: 1200px;
+  background-color: #EABCAC;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* 軽いシャドウ */
+  overflow: hidden;
+  padding: 5px;
 }
 
 .review-shop-info {
-  width: 100%;
-}
-
-.review-shop-img {
-  width: 500px;
+  flex: 1;
+  background-color: #EABCAC;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   border-radius: 10px;
 }
 
-.review-form-container {
-  padding: 20px;
+.review-shop-name {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fffafa;
+  margin-bottom: 20px;
+}
+
+.review-shop-img {
   width: 100%;
-  max-width: 600px;
-  text-align: center;
-  top: 50%;
-  position: absolute;
+  max-width: 400px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.review-form-container {
+  flex: 1.5;
+  padding: 20px;
+  background-color: #FFFFFF;
+}
+
+.back-link {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.cancel-btn {
+  cursor: pointer;
 }
 
 .review-post-logo-icon {
@@ -39,12 +66,11 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
-  border-bottom: 1px solid #805d7c;
 }
 
-.review-form-container h1 {
-  font-size: 35px;
-  color: #874e5c;
+.review-post-logo-icon h1 {
+  font-size: 28px;
+  color: #874E4C;
   margin-left: 10px;
 }
 
@@ -52,13 +78,27 @@
   margin-bottom: 20px;
 }
 
+.photo-area {
+  display: flex;
+  align-items: center;
+}
+
+.photo {
+  font-size: 16px;
+  font-weight: 600;
+  color: #874E4C;
+  margin-left: 5px;
+}
+
 .form-control {
   width: 100%;
   padding: 10px;
   font-size: 16px;
-  border: 1px solid #805d7c;
+  border: 1px solid #E2B091;
   border-radius: 4px;
   box-sizing: border-box;
+  background-color: #F7DFD4;
+  color: #874E4C;
 }
 
 .input-visit-wrap {
@@ -66,10 +106,14 @@
   align-items: center;
 }
 
+.input-visit-wrap p {
+  color: #874E4C;
+}
+
 .visit-label {
   font-size: 16px;
   font-weight: 600;
-  color: #4C384A;
+  color: #874E4C;
   margin-right: 20px;
 }
 
@@ -82,6 +126,10 @@
   width: auto;
   padding: 10px;
   font-size: 14px;
+  border: 1px solid #E2B091;
+  border-radius: 4px;
+  background-color: #F7DFD4;
+  color: #874E4C;
 }
 
 .select-year {
@@ -101,9 +149,9 @@
 }
 
 .comment-label {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 600;
-  color: #4C384A;
+  color: #874E4C;
 }
 
 .review-post-btn {
@@ -112,7 +160,17 @@
   margin-top: 30px;
 }
 
-.back-link, .actions {
-  flex: 1;
-  margin: 0 auto;
+.actions {
+  display: flex;
+  justify-content: center;
 }
+
+/* .review-post-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+} */
+

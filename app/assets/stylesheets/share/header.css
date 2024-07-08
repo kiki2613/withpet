@@ -160,7 +160,7 @@
 }
 
 /* テキストボックス */
-.form-control {
+.search-form-control {
   flex: 1;
   width: 100%;
   padding: 10px;
@@ -177,8 +177,4 @@ input::placeholder {
   border-color: #f1a6b0;
   outline: 0;
   box-shadow: 0 0 8px rgba(241, 166, 176, 1);
-}
-
-.search-btn {
-  
 }
