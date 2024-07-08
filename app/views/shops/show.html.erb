@@ -107,15 +107,9 @@
       <% if @shop.reviews.present? %>
         <% @shop.reviews.each do |review| %>
           <div class="review-item">
-            <% if review.image.attached? %>
-              <div class="review-image">
-                <%= image_tag review.image.variant(resize: '300x300') %>
-              </div>
-            <% end %>
-            <div class="review-content">
-              <div class="review-content-top">
-                <p class="review-date"><strong>来店日:</strong> <%= review.visit_date %></p>
-                <div class="more-options">
+            <div class="more-options-blank">
+              <div class="more-options">
+                <% if review.user_id == current_user.id %>
                   <i class="fa-solid fa-circle-chevron-down fa-lg" style="color: #ffffff;"></i>
                   <ul class="more-list">
                     <li>
@@ -125,12 +119,19 @@
                       <%= link_to '削除', shop_review_path(@shop, review), data: {turbo_method: :delete } %>
                     </li>
                   </ul>
-                </div>
+                <% end %>
               </div>
+            </div>
+            <% if review.image.attached? %>
+              <div class="review-image">
+                <%= image_tag review.image.variant(resize: '300x300') %>
+              </div>
+            <% end %>
+            <div class="review-content">
+              <p class="review-date"><strong>来店日:</strong> <%= review.visit_date %></p>
               <p class="review-comment"><%= review.comment %></p>
               <p class="review-user"><%= review.user.nickname %></p>
             </div>
-            
           </div>
         <% end %>
       <% else %>
