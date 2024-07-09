@@ -21,7 +21,7 @@
   margin-right: 50px;
 }
 
-.title-logo {
+.title-logo, .title {
   font-size: 35px;
   letter-spacing: 2px;
   color: #fffafa;
@@ -61,13 +61,13 @@
   display: flex;
   align-items: center;
   cursor: pointer;
+  position: relative;
 }
 
 .nickname {
   margin-right: 10px;
   border-bottom: 2px solid #f2e2cd;
 }
-
 
 /* ********************************************************
 マイページのプルダウン
@@ -80,9 +80,10 @@
   border-radius: 5px;
   position: absolute;
   top: 30px;
-  right: 25px;
+  right: 0;
   padding: 0;
   margin: 0;
+  display: none;
 }
 
 .mypage-pulldown a {
@@ -123,6 +124,11 @@
 
 .hidden {
   display: none;
+}
+
+/* ホバー時にプルダウンを表示 */
+.user-nickname:hover .mypage-pulldown {
+  display: block;
 }
 
 /* ************************************************
