@@ -16,52 +16,53 @@
           <div class="nickname">
             Welcome <%= current_user.nickname %>
           </div> 
+       
+          <ul class="mypage-pulldown hidden" id="mypage-list">
+            <li class="mypage-menu">
+              <%= link_to user_path(current_user.id), class: "user-info" do %>
+                <div class="mypage-icon-logo">
+                  <i class="fa-solid fa-user" style="color: #874e5c;"></i>
+                  <div class="user-info-logo">
+                    プロフィール
+                  </div>
+                </div>
+              <% end %>
+            </li>
+            
+            <li class="mypage-menu">
+              <%= link_to favorites_path, class: "myfavorite" do %>
+                <div class="mypage-icon-logo">
+                  <i class="fa-solid fa-heart" style="color: #ec3383;"></i>
+                  <div class="myfavorite-logo">
+                    お気に入りリスト
+                  </div>
+                </div>
+              <% end %>
+            </li>
+
+            <li class="mypage-menu">
+              <%= link_to reviews_path, class: "mycomment" do %>
+                <div class="mypage-icon-logo">
+                  <i class="fa-regular fa-comment" style="color: #74C0FC;"></i>
+                  <div class="mycomment-logo">
+                    口コミ投稿リスト
+                  </div>
+                </div>
+              <% end %>
+            </li>
+
+            <li class="mypage-menu">
+              <%= link_to destroy_user_session_path, data: { turbo_method: :delete }, class: "logout" do %>
+                <div class="mypage-icon-logo">
+                  <i class="fa-solid fa-up-right-from-square" style="color: #B197FC;"></i>
+                  <div class="logout-logo">
+                    ログアウト
+                  </div>
+                </div>
+              <% end %>
+            </li>
+          </ul>
         </div>
-        <ul class="mypage-pulldown hidden" id="mypage-list">
-          <li class="mypage-menu">
-            <%= link_to user_path(current_user.id), class: "user-info" do %>
-              <div class="mypage-icon-logo">
-                <i class="fa-solid fa-user" style="color: #874e5c;"></i>
-                <div class="user-info-logo">
-                  プロフィール
-                </div>
-              </div>
-            <% end %>
-          </li>
-          
-          <li class="mypage-menu">
-            <%= link_to favorites_path, class: "myfavorite" do %>
-              <div class="mypage-icon-logo">
-                <i class="fa-solid fa-heart" style="color: #ec3383;"></i>
-                <div class="myfavorite-logo">
-                  お気に入りリスト
-                </div>
-              </div>
-            <% end %>
-          </li>
-
-          <li class="mypage-menu">
-            <%= link_to reviews_path, class: "mycomment" do %>
-              <div class="mypage-icon-logo">
-                <i class="fa-regular fa-comment" style="color: #74C0FC;"></i>
-                <div class="mycomment-logo">
-                  口コミ投稿リスト
-                </div>
-              </div>
-            <% end %>
-          </li>
-
-          <li class="mypage-menu">
-            <%= link_to destroy_user_session_path, data: { turbo_method: :delete }, class: "logout" do %>
-              <div class="mypage-icon-logo">
-                <i class="fa-solid fa-up-right-from-square" style="color: #B197FC;"></i>
-                <div class="logout-logo">
-                  ログアウト
-                </div>
-              </div>
-            <% end %>
-          </li>
-        </ul>
       </li>
     <% else %>
       <li class="header-li">
