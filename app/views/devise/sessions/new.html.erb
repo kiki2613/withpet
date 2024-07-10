@@ -1,6 +1,7 @@
 <%= form_with model: @user, url: user_session_path, class: 'registration-main', local: true do |f| %>
-  <div class="form-area">
-    <div class='form-container'>
+<div class="user-registration-main">
+  <div class="form-area-login">
+    <div class='form-container-login'>
       <div class='back-link'>
         <%= link_to root_path do %>
           <div class="cancel-btn">
@@ -8,7 +9,7 @@
           </div>
         <% end %>
       </div>
-      <div class='form-header'>
+      <div class='form-header-login'>
         <h1 class='form-header-text'>
           会員情報入力
         </h1>
@@ -31,12 +32,13 @@
         </div>
         <%= f.password_field :password, class:"input-default", id:"password", placeholder:"" %>
       </div>
-      <div class='register-btn'>
+      <div class='register--btn'>
         <%= f.submit "ログイン", class:"register-button" %>
       </div>
-      <div class="registration-login-link">
-        <%= link_to '新規登録はこちらから', new_user_session_path, class: "login-link" %>
+      <div class="registration-login--link">
+        <%= link_to '新規登録はこちらから', new_user_registration_path, class: "login-link" %>
       </div>
     </div>
   </div>
+</div>
 <% end %>

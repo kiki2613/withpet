@@ -1,0 +1,18 @@
+<div class="my-favorite-list">
+  <% if @reviewed_shops.present? %>
+    <ul class="shop-li">
+      <% @reviewed_shops.each do |shop| %>
+        <%= render partial: 'share/shop_info', locals: { shop: shop } %>
+      <% end %>
+    </ul>
+  <% else %>
+    <div class="my-favorite-none">
+      <div class="none-favorite-logo">
+        来店したことのあるお店にレビューを書こう！
+      </div>
+      <div class="search-back">
+        <%= link_to "いますぐさがす", root_path, class: "top-back-button" %>
+      </div>
+    </div>
+  <% end %>
+</div>

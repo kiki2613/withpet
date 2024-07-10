@@ -1,3 +1,31 @@
+.form-area-login {
+  width: 40%;
+  background-color: #fde6c3;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: auto;
+}
+
+.form-container {
+  overflow: auto;
+  text-align: center;
+}
+
+.form-header-login {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.register--btn {
+  text-align: center;
+}
+
+.registration-login--link {
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+
 .login-btn {
   width: 100px;
   margin: 0 auto;

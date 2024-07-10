@@ -7,22 +7,7 @@
       お気に入りリスト
     </div>
   </div>
-  <div class="my-favorite-list">
-    <% if @favorited_shops.present? %>
-      <ul class="shop-li">
-        <% @favorited_shops.each do |shop| %>
-          <%= render partial: 'share/shop_info', locals: { shop: shop } %>
-        <% end %>
-      </ul>
-    <% else %>
-      <div class="my-favorite-none">
-        <div class="none-favorite-logo">
-          お気に入りの店舗を見つけよう！
-        </div>
-        <div class="search-back">
-          <%= link_to "いますぐさがす", root_path, class: "search-back-button" %>
-        </div>
-      </div>
-    <% end %>
-  </div>
+
+  <%= render 'share/my_page_index' %>
+
 </div>
