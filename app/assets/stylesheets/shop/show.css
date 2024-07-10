@@ -166,6 +166,7 @@
 
 .map-area {
   width: 100%;
+  margin-left: 30px;
 }
 
 .reviews-container {
@@ -216,7 +217,7 @@
   margin: 0;
   display: none;
   position: absolute;
-  top: 28px;
+  top: 25px;
   right: 0;
   background: #FFFFFF;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -239,7 +240,7 @@
 
 .more-list li a {
   text-decoration: none;
-  color: #E25F70; /* ボタンの色 */
+  color: #E25F70;
 }
 
 .more-list li a:hover {

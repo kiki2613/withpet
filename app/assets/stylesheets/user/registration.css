@@ -1,14 +1,16 @@
-
+/* ログイン画面にも一部使用 */
 .user-registration {
   padding-top: 80px;
+  overflow: auto;
 }
 
-.registration-main {
+.user-registration-main {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: auto;
+  padding: 20px 0;
 }
 
 /* 戻るリンク */
@@ -21,16 +23,18 @@
 /* フォームエリア */
 .form-area {
   width: 40%;
-  margin-bottom: 20px;
-  background-color: #FFFFFF;
+  height: 100%;
+  background-color: #fde6c3;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: auto;
 }
 
 /* フォームコンテナ */
 .form-container {
+  height: 100%;
+  overflow: auto;
   text-align: center;
-  /* padding: 15px 50px; */
 }
 
 /* フォームヘッダー */
