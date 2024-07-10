@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root to: 'shops#index'
 
-  devise_for :users, controllers: { registrations: 'users/registrations' }
+  devise_for :users
   get "users/show" => "users#show"
   
   resources :shops, only: [:index, :show] do
