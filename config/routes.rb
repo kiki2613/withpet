@@ -12,4 +12,5 @@ Rails.application.routes.draw do
   resources :users,     only: :show
   resources :favorites, only: :index
   resources :reviews,   only: :index
+  resources :searchs,   only: :index
 end

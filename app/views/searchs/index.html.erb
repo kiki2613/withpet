@@ -1,6 +1,6 @@
 <%= search_form_for @q, html: { class: 'search-form' } do |f| %>
-<div class="serach-form-area">
-  <div class="search-wrap">
+<div class="details-serach-form">
+  <div class="details-search-wrap">
     <div class="search-form-input">
       <%= f.search_field :address_cont, class: 'search-form-control', placeholder: "エリア（東京都、神奈川県）" %>
     </div>
@@ -10,9 +10,6 @@
     <div class="search-btn">
       <%= f.submit "さがす", class: 'search-button' %>
     </div>
-  </div>
-  <div class="detail-search">
-    <%= link_to "条件を追加する", searchs_path, class: "detail-search-link" %>
   </div>
 </div>
 <% end %>
