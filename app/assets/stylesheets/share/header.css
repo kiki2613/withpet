@@ -190,3 +190,7 @@ input::placeholder {
   outline: 0;
   box-shadow: 0 0 8px rgba(241, 166, 176, 1);
 }
+
+.detail-search-link {
+  color: #fffafa;
+}

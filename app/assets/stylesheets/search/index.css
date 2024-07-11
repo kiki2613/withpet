@@ -4,19 +4,34 @@
 }
 
 .details-search-form {
-  /* width: 100%;
+  width: 100%;
   height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center; */
+  align-items: center;
+  flex-direction: column;
 }
 
 .details-search-logo {
-  color: #a78c8d;
+  color: #874E4C;
   font-size: 25px;
+  margin-bottom: 15px;
 }
 
 .details-search-wrap {
   background-color: #a78c8d;
   padding: 30px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.details {
+  margin-bottom: 20px;
+}
+
+.radio-btn-logo {
+  color: #fffafa;
 }
