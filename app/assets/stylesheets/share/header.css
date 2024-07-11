@@ -194,3 +194,8 @@ input::placeholder {
 .detail-search-link {
   color: #fffafa;
 }
+
+.detail-search-link:hover {
+  color: #E25F70;
+  border-bottom: 1px solid #E25F70;
+}
