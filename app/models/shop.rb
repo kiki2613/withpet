@@ -11,7 +11,11 @@ class Shop < ApplicationRecord
             presence: true
 
   def self.ransackable_attributes(auth_object = nil)
+<<<<<<< Updated upstream
     %w[address nearest_station boudget_daytimes boudget_night attention]
+=======
+    %w[address nearest_station boudget attention]
+>>>>>>> Stashed changes
   end
 
   scope :open, -> { where(attention: 'テラス席のみ可') }

@@ -5,8 +5,11 @@ shops = [
     nearest_station: '明治神宮',
     time_to_station: 1,
     phone_number: '03-3478-0182',
-    opening_times: '11:30 - 21:00',
+    opening_times_daytimes: '11:30 - 21:00',
+    opening_times_night:'',
     closing_days: '無休',
+    boudget_daytimes: '1000~2000',
+    boudget_night: '1000~2000',
     attention: 'テラス席のみ可',
     image_path: '/images/cafe STUDIO.jpg'
    
@@ -17,8 +20,11 @@ shops = [
     nearest_station: 'JR武蔵小杉',
     time_to_station: 1,
     phone_number: '044-322-0850',
-    opening_times: '11:00 - 22:00',
+    opening_times_daytimes: '11:00 - 22:00',
+    opening_times_night:'',
     closing_days: '',
+    boudget_daytimes: '2000~3000',
+    boudget_night: '10000~',
     attention: 'テラス席のみ可',
     image_path: '/images/3rd Avenue Food Market.jpg'
     
@@ -29,8 +35,11 @@ shops = [
     nearest_station: '東千葉',
     time_to_station: 19,
     phone_number: '043-309-5686',
-    opening_times: '11:00 - 18:00',
+    opening_times_daytimes: '11:00 - 18:00',
+    opening_times_night:'',
     closing_days: '毎週水曜日',
+    boudget_daytimes: '4000~5000',
+    boudget_night: '1000~2000',
     attention: 'テラス席のみ可',
     image_path: '/images/コテカフェ.jpg'
     
@@ -41,9 +50,12 @@ shops = [
     nearest_station: '本川越',
     time_to_station: 10,
     phone_number: '049-202-2049',
-    opening_times: '10:00 - 21:00',
+    opening_times_daytimes: '10:00 - 21:00',
+    opening_times_night:'',
     closing_days: '',
-    attention: '',
+    boudget_daytimes: '6000~7000',
+    boudget_night: '1000~2000',
+    attention: '店内のみ可',
     image_path: '/images/049DINER.jpg'
     
   },
@@ -53,9 +65,12 @@ shops = [
     nearest_station: '恵比寿',
     time_to_station: 3,
     phone_number: '03-3791-3551',
-    opening_times: '17:00 - 23:00',
+    opening_times_daytimes: '17:00 - 23:00',
+    opening_times_night:'',
     closing_days: '無休',
-    attention: '',
+    boudget_daytimes: '~1000',
+    boudget_night: '1000~2000',
+    attention: 'テラス席・店内両方可',
     image_path: '/images/マーサーカフェダンロ.jpg'
     
   }
