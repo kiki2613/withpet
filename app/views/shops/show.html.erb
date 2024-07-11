@@ -32,13 +32,6 @@
             </div>
           <% end %>
         </div>
-        <div class="top-back-link">
-          <%= link_to root_path, class: 'btn btn--back btn--circle btn--circle-a btn--shadow' do %>
-            <div class="top-back-btn">
-              <i class="fa-solid fa-arrow-left fa-xl" style="color: #ffffff;"></i>
-            </div>
-          <% end %>
-        </div>
       </div>
     </div>
 
@@ -153,3 +146,11 @@
     </div>
   </div>
 </div>
+<%= link_to root_path do %>
+  <div class="home-back-link">
+    <i class="fa-solid fa-house" style="color: #e25f70;"></i>
+    <div class="home-logo">
+      TOPにもどる
+    </div>
+  </div>
+<% end %>
