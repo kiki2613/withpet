@@ -101,12 +101,28 @@
   border-bottom: 1px solid #C44B59;
 }
 
-.top-back-link {
+/* .top-back-link {
   margin-top: 80px;
 }
 
 .top-back-btn {
   height: 50px;
+} */
+
+.home-back-link {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.home-back-link:hover {
+  border-bottom: 1px solid #E25F70;
+}
+
+.home-logo {
+  font-size: 16px;
+  color: #E25F70;
+  margin-left: 5px;
 }
 
 /* ***********************************************************

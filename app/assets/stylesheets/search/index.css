@@ -39,10 +39,16 @@
   flex-direction: column;
 }
 
+.search-form-input-icon {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
 .search-form-input-label {
   color: #F7DFD4;
   font-size: 20px;
-  margin-bottom: 5px;
+  margin-left: 5px;
 }
 
 .details {
