@@ -10,6 +10,7 @@ shops = [
     closing_days: '無休',
     boudget_daytimes: '1000~2000',
     boudget_night: '1000~2000',
+    genre: '中華料理',
     attention: 'テラス席のみ可',
     image_path: '/images/cafe STUDIO.jpg'
    
@@ -26,6 +27,7 @@ shops = [
     boudget_daytimes: '2000~3000',
     boudget_night: '10000~',
     attention: 'テラス席のみ可',
+    genre: 'カフェ',
     image_path: '/images/3rd Avenue Food Market.jpg'
     
   },
@@ -40,6 +42,7 @@ shops = [
     closing_days: '毎週水曜日',
     boudget_daytimes: '4000~5000',
     boudget_night: '1000~2000',
+    genre: '和食',
     attention: 'テラス席のみ可',
     image_path: '/images/コテカフェ.jpg'
     
@@ -55,6 +58,7 @@ shops = [
     closing_days: '',
     boudget_daytimes: '6000~7000',
     boudget_night: '1000~2000',
+    genre: '韓国料理',
     attention: '店内のみ可',
     image_path: '/images/049DINER.jpg'
     
@@ -70,7 +74,8 @@ shops = [
     closing_days: '無休',
     boudget_daytimes: '~1000',
     boudget_night: '1000~2000',
-    attention: 'テラス席・店内両方可',
+    genre: 'イタリアン',
+    attention: '両方可',
     image_path: '/images/マーサーカフェダンロ.jpg'
     
   }
