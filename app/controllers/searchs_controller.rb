@@ -1,10 +1,7 @@
 class SearchsController < ApplicationController
   def index
-    @shops = Shop.all
     search
   end
-
-  private
 
   def search
     @q = Shop.ransack(params[:q])

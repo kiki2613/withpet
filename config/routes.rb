@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   get "users/show" => "users#show"
   
   resources :shops, only: [:index, :show] do
+    collection do
+      match 'search' => 'shops#index', via: [:get, :post], as: :search
+    end
     resource  :favorites, only: [:create, :destroy,]
     resources :reviews,   only: [:create, :destroy, :new, :edit, :update]
   end
