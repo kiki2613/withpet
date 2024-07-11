@@ -11,8 +11,15 @@ class Shop < ApplicationRecord
             presence: true
 
   def self.ransackable_attributes(auth_object = nil)
-    ["address", "nearest_station"]
+<<<<<<< Updated upstream
+    %w[address nearest_station boudget_daytimes boudget_night attention]
+=======
+    %w[address nearest_station boudget attention]
+>>>>>>> Stashed changes
   end
+
+  scope :open, -> { where(attention: 'テラス席のみ可') }
+  scope :closed, -> { where(status: '店内のみ可') }
 
   def favorited_by?(user)
     favorites.where(user_id: user.id).exists?

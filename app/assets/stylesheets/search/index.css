@@ -1,0 +1,22 @@
+.details-search-form {
+  width: 100%;
+  height: 100vh;
+}
+
+.details-search-form {
+  /* width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+.details-search-logo {
+  color: #a78c8d;
+  font-size: 25px;
+}
+
+.details-search-wrap {
+  background-color: #a78c8d;
+  padding: 30px;
+}
