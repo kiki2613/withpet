@@ -85,6 +85,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_07_03_090223) do
     t.string "closing_days"
     t.string "boudget_daytimes"
     t.string "boudget_night"
+    t.string "genre"
     t.text "attention"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

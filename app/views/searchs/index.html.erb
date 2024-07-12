@@ -30,7 +30,7 @@
       </div>
       <%= f.search_field :nearest_station_cont, class: 'search-form-control', placeholder: "駅名（渋谷駅、横浜駅）" %>
     </div>
-     <div class="serch-form-input details">
+    <div class="serch-form-input details">
       <div class="search-form-input-icon">
         <i class="fa-solid fa-paw fa-lg" style="color: #f7dfd4;"></i>
         <div class="search-form-input-label">
@@ -40,15 +40,34 @@
       <div class="terrace-seating">
         <div class="terrace-seating-select">
           <%= f.radio_button :attention_eq, "テラス席のみ可" %>
-          <%= f.label :attention_eq_terrace, "テラス席のみ可", class: "radio-btn-logo" %>
+          <%= f.label :attention_eq, "テラス席のみ可", class: "radio-btn-logo" %>
         </div>
         <div class="terrace-seating-select">
           <%= f.radio_button :attention_eq, "店内のみ可" %>
-          <%= f.label :attention_eq_shopin, "店内のみ可", class: "radio-btn-logo" %>
+          <%= f.label :attention_eq, "店内のみ可", class: "radio-btn-logo" %>
         </div>
         <div class="terrace-seating-select">
           <%= f.radio_button :attention_eq, "両方可" %>
-          <%= f.label :attention_eq_both, "両方可", class: "radio-btn-logo" %>
+          <%= f.label :attention_eq, "両方可", class: "radio-btn-logo" %>
+        </div>
+      </div>
+    </div>
+    <div class="serch-form-input details">
+      <div class="search-form-input-icon">
+        <i class="fa-solid fa-paw fa-lg" style="color: #f7dfd4;"></i>
+        <div class="search-form-input-label">
+          ジャンル
+        </div>
+      </div>
+      <div class="terrace-seating">
+        <div class="terrace-seating-select">
+          <% cuisines = ['中華料理', '和食', 'イタリアン', 'フレンチ', 'アメリカン', 'インド料理', 'メキシカン', '韓国料理', 'タイ料理', '地中海料理'] %>
+          <% cuisines.each do |cuisine| %>
+            <div class="check-box-btn-logo">
+              <%= f.check_box :genre_in, { multiple: true }, cuisine, nil %> 
+              <%= cuisine %>
+            </div>
+          <% end %>
         </div>
       </div>
     </div>
