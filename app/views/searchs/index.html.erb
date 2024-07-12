@@ -61,7 +61,7 @@
       </div>
       <div class="terrace-seating">
         <div class="terrace-seating-select">
-          <% cuisines = ['ステーキ', '和食', 'イタリアン', 'フレンチ', 'スペイン料理', 'インド料理', 'メキシコ料理', '韓国料理', 'タイ料理', 'アジア・エスニック', 'ファストフード'] %>
+          <% cuisines = ['ステーキ', '和食', '居酒屋', 'イタリアン', 'フレンチ', 'スペイン料理', 'メキシコ料理', '韓国料理', 'タイ料理', 'アジア・エスニック', 'ファストフード'] %>
           <% cuisines.each do |cuisine| %>
             <div class="check-box-btn-logo">
               <%= f.check_box :genre_in, { multiple: true }, cuisine, nil %> 
