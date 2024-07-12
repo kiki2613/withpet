@@ -14,10 +14,6 @@ class Shop < ApplicationRecord
     %w[address nearest_station boudget_daytimes boudget_night attention genre]
   end
 
-  scope :terrace, -> { where(attention: 'テラス席のみ可') }
-  scope :shopin,  -> { where(status: '店内のみ可') }
-  scope :both,    -> { where(status: '両方可') }
-
   def favorited_by?(user)
     favorites.where(user_id: user.id).exists?
   end

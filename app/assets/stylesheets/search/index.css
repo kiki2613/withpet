@@ -29,7 +29,7 @@
 
 .details-search-logo {
   color: #fffafa;
-  font-size: 28px;
+  font-size: 32px;
   margin-bottom: 18px;
 }
 
@@ -47,7 +47,7 @@
 
 .search-form-input-label {
   color: #F7DFD4;
-  font-size: 20px;
+  font-size: 24px;
   margin-left: 5px;
 }
 
@@ -58,4 +58,12 @@
 
 .radio-btn-logo {
   color: #fffafa;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.check-box-btn-logo {
+  color: #fffafa;
+  font-size: 18px;
+  margin-bottom: 5px;
 }
