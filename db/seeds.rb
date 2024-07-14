@@ -176,22 +176,6 @@ shops = [
     
   },
   {
-    name: 'ぺスカーラ',
-    address: '神奈川県横浜市港北区綱島東1-7-17 新文化ビル 1F',
-    nearest_station: '綱島駅',
-    time_to_station: 1,
-    phone_number: '045-532-2555',
-    opening_times_daytimes: '11:30 - 14:30',
-    opening_times_night:'17:00 - 23:00',
-    closing_days: '無休',
-    boudget_daytimes: '',
-    boudget_night: '',
-    genre: 'イタリアン',
-    attention: 'テラス席のみ可',
-    image_path: '/images/ぺスカーラ.jpg'
-    
-  },
-  {
     name: '幕張バルnaDia（ナディア）',
     address: '千葉県千葉市花見川区幕張町5-417-154 第13花園ビル 1F',
     nearest_station: '京成幕張',
