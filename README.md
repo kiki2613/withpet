@@ -8,84 +8,106 @@ With pet
 https://withpet.onrender.com
 
 
+# テスト用アカウント
+- Basic認証パスワード：0325
+- Basic認証ID：moka
+- メールアドレス：test@test
+- パスワード：ttt000
 
+# 利用方法
+## 飲食店の検索
+### 通常の検索
+1.トップページのヘッダーから検索フォームに検索ワードを入力し「さがす」ボタンをクリックする  
+＊エリアもしくは駅名のどちらか片方のみの入力で検索可能
 
+### 条件を絞って検索
+1.トップページのヘッダーの検索フォームの下にある「条件を追加する」のリンクをクリックする  
+2.検索したい項目にチェックをいれて「さがす」ボタンをクリックする  
+＊条件が空欄のところがあっても検索可能
 
+## お気に入り機能(ログイン時のみ)
+### お気に入り登録
+1.トップページのヘッダーから「Sign up」ボタンをクリックし、新規登録する  
+2.トップページの店舗の写真の右上にあるハートマークをクリックする  
+3.もしくはトップページの写真をクリックし、店舗詳細情報ページにアクセスしてハートマークをクリックする
+[![Image from Gyazo](https://i.gyazo.com/affafb271b3d7c09ecff876f3e6c2370.gif)](https://gyazo.com/affafb271b3d7c09ecff876f3e6c2370)
 
+### お気に入り店舗一覧
+1.トップページのヘッダーの「Welcome nickname」にカーソルを合わせる  
+2.表示されたプルダウンメニューから「お気に入りリスト」を選択する
 
+## レビュー機能(ログイン時のみ)
+### レビュー投稿
+1.トップページのヘッダーから「Sign up」ボタンをクリックし、新規登録する  
+2.トップページの写真をクリックし、店舗詳細情報ページにアクセスする  
+3.ハートマークの隣にあるアイコンをクリックしてレビュー投稿ページに遷移する
+[![Image from Gyazo](https://i.gyazo.com/51657419114f51f81870a349d0557227.gif)](https://gyazo.com/51657419114f51f81870a349d0557227)  
+4.写真の選択(任意)、来店日、レビュー内容を入力し「投稿する」ボタンをクリックする
 
+### レビュー編集
+1.レビューを投稿した店舗詳細情報ページにアクセスする  
+2.自分が投稿したレビューの右上にある🔽アイコンにカーソルを合わせる
+[![Image from Gyazo](https://i.gyazo.com/a40e823f99d9b285e46bc60e548a2de9.gif)](https://gyazo.com/a40e823f99d9b285e46bc60e548a2de9)
+3.表示されたプルダウンメニューから「編集」を選択する  
+4.編集したい内容を変更後「投稿する」ボタンをクリックする
 
+### レビュー削除
+1.レビューを投稿した店舗詳細情報ページにアクセスする  
+2.自分が投稿したレビューの右上にある🔽アイコンにカーソルを合わせる  
+3.表示されたプルダウンメニューから「削除」を選択する
 
+### レビューを投稿した店舗一覧
+1.トップページのヘッダーの「Welcome nickname」にカーソルを合わせる  
+2.表示されたプルダウンメニューから「口コミ投稿リスト」を選択する
 
+# アプリケーションを作成した背景
+私自身犬を飼っていた経験があり、出先でペット連れ込み可能な飲食店を探すのに苦労したことがある。  
+食べログなどの既に存在するアプリケーションで検索することも可能だったが、自分で条件を追加しないといけないため、少し手間がかかる。  
+それならば元々データにペットOKの飲食店しか登録されていないアプリケーションがあればもっと簡単に検索することができるのではないかと考え、開発することにした。
 
+# 洗い出した要件
+https://docs.google.com/spreadsheets/d/19KPq_hpz5bkpo16du6P2-GSGEaualpxMtLhthCs5zQA/edit?usp=sharing
 
+# 実装予定の機能
+- モデルの単体テストコード
+- データを増やしていくための店舗情報投稿機能、もしくはスクレイピングでデータを借りる機能
+- 検索条件を追加（予算や営業時間でも検索できるようにするため）
+- javascriptを使ってトップページに写真がスライドショーのように流れる機能
 
+# データベース設計
+[![Image from Gyazo](https://i.gyazo.com/558ef7d73e0d9265b3e3fe1ae155f7c6.png)](https://gyazo.com/558ef7d73e0d9265b3e3fe1ae155f7c6)
+＊カラム名が_idになっているものは、ActiveHashで管理しています
 
+# 画面遷移図
+[![Image from Gyazo](https://i.gyazo.com/f84c76fd4ee7301a0c2b39cbfa5b27e1.png)](https://gyazo.com/f84c76fd4ee7301a0c2b39cbfa5b27e1)
 
-# テーブル設計
+# ローカルでの動作方法
+以下のコマンドを順に実行
+ 
+% git clone https://github.com/kiki2613/withpet.git
 
-## usersテーブル
+% cd withpet
 
-| Column             | Type    | Options      |
-| ------------------ | ------- | ------------ |
-| nickname           | string  | null: false  |
-| email              | string  | null: false, unique: true  |
-| encrypted_password | string  | null: false  |
-| age_id             | integer |              |
-| gender_id          | integer |              |
+% bundle install
 
-### association
+% db:seed
 
-- has_many :reviews
-- has_many :favorites
+# 開発環境
+### フロントエンド
+- HTML
+- CSS
+### バックエンド
+- Ruby
+- Ruby on rails
+### テキストエディタ
+- Visual Studio Code
+### タスク管理
+- GitHub プロジェクトボード
 
+# 工夫した点
+- 絞り込み検索欄に「ペット可の席」の項目を追加したこと
 
-## shopsテーブル
+   ペットを連れて出かけた時に急に雨が降ってきて雨宿りしようとした時、ペットの連れ込みが可能なのはテラス席のみと言われた経験があったため。
+- 使いやすさを重視したこと
 
-| Column          | Type     | Options         |
-|-----------------|----------|-----------------|
-| name            | string   | null: false     |
-| address         | string   | null: false     |
-| nearest_station | text     | null: false     |
-| image_path      | string   | null: false     |
-| time_to_station | integer  |                 |
-| phone_number    | string   |                 |
-| opening_times   | string   |                 |
-| closing_days    | string   |                 |
-| attention       | text     |                 |
-
-
-### association
-
-- has_many :reviews
-- has_many :favorites
-
-
-## reviewsテーブル
-
-| Column     | Type       | Options         |
-|------------|------------|-----------------|
-| user_id    | references | null: false, foreign_key: true |
-| shop_id    | references | null: false, foreign_key: true |
-| visit_date | Date       | null: false     |
-| comment    | text       | null: false     |
-
-*imageはActive storageで実装
-
-### association
-
-- belongs_to :user
-- belongs_to :shop
-
-
-## favoritesテーブル
-
-| Column    | Type        | Options         |
-|-----------|-------------|-----------------|
-| user_id   | references  | null: false, foreign_key: true |
-| shop_id   | references  | null: false, foreign_key: true |
-
-### association
-
-- belongs_to :user
-- belongs_to :shop
+  自分でさまざまなアプリケーションを使用していく中で、ここにトップページに戻るボタンがあったらいいのに、ここの戻るボタンは前のページに戻ってくれたらいいのに、という思いがあったため、特にアプリケーション内の動線を工夫した。
