@@ -7,7 +7,7 @@ class Shop < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :prefecture
 
-  validates :name, :address, :nearest_station, :image_path,
+  validates :name, :address, :nearest_station, :image_path, :attention,
             presence: true
 
   def self.ransackable_attributes(auth_object = nil)

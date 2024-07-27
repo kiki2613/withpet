@@ -84,7 +84,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_07_03_090223) do
     t.string "opening_times_night"
     t.string "closing_days"
     t.string "genre"
-    t.text "attention"
+    t.text "attention", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "image_path"
