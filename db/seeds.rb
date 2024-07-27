@@ -8,8 +8,6 @@ shops = [
     opening_times_daytimes: '11:30 - 21:00',
     opening_times_night:'',
     closing_days: '無休',
-    boudget_daytimes: '1000~2000',
-    boudget_night: '1000~2000',
     genre: 'カフェ',
     attention: 'テラス席のみ可',
     image_path: '/images/cafe STUDIO.jpg'
@@ -24,8 +22,6 @@ shops = [
     opening_times_daytimes: '11:00 - 22:00',
     opening_times_night:'',
     closing_days: '',
-    boudget_daytimes: '2000~3000',
-    boudget_night: '10000~',
     attention: 'テラス席のみ可',
     genre: 'カフェ',
     image_path: '/images/3rd Avenue Food Market.jpg'
@@ -40,8 +36,6 @@ shops = [
     opening_times_daytimes: '11:00 - 18:00',
     opening_times_night:'',
     closing_days: '毎週水曜日',
-    boudget_daytimes: '4000~5000',
-    boudget_night: '1000~2000',
     genre: 'カフェ',
     attention: 'テラス席のみ可',
     image_path: '/images/コテカフェ.jpg'
@@ -56,8 +50,6 @@ shops = [
     opening_times_daytimes: '10:00 - 21:00',
     opening_times_night:'',
     closing_days: '',
-    boudget_daytimes: '6000~7000',
-    boudget_night: '1000~2000',
     genre: 'アジア・エスニック',
     attention: '店内のみ可',
     image_path: '/images/049DINER.jpg'
@@ -72,8 +64,6 @@ shops = [
     opening_times_daytimes: '17:00 - 23:00',
     opening_times_night:'',
     closing_days: '無休',
-    boudget_daytimes: '~1000',
-    boudget_night: '1000~2000',
     genre: 'カフェ',
     attention: '両方可',
     image_path: '/images/マーサーカフェダンロ.jpg'
@@ -88,8 +78,6 @@ shops = [
     opening_times_daytimes: '',
     opening_times_night:'',
     closing_days: '日・祝',
-    boudget_daytimes: '',
-    boudget_night: '',
     genre: 'イタリアン、居酒屋',
     attention: 'テラス席のみ可',
     image_path: '/images/ハチョボリーノ.jpg'
@@ -104,8 +92,6 @@ shops = [
     opening_times_daytimes: '11:00 - 23:00',
     opening_times_night:'',
     closing_days: '無休',
-    boudget_daytimes: '',
-    boudget_night: '',
     genre: '居酒屋',
     attention: '両方可',
     image_path: '/images/浅草酒場.jpg'
@@ -120,8 +106,6 @@ shops = [
     opening_times_daytimes: '12:00 - 15:00',
     opening_times_night:'17:00 - 22:30',
     closing_days: '月曜日',
-    boudget_daytimes: '',
-    boudget_night: '',
     genre: 'フレンチ',
     attention: 'テラス席のみ可',
     image_path: '/images/ガルフス.jpg'
@@ -136,8 +120,6 @@ shops = [
     opening_times_daytimes: '11:00 - 22:00',
     opening_times_night:'',
     closing_days: '無休',
-    boudget_daytimes: '',
-    boudget_night: '',
     genre: 'カフェ',
     attention: 'テラス席のみ可',
     image_path: '/images/バターミルクチャネル.jpg'
@@ -152,8 +134,6 @@ shops = [
     opening_times_daytimes: '15:00 - 0:00',
     opening_times_night:'17:00 - 0:00',
     closing_days: '無休',
-    boudget_daytimes: '',
-    boudget_night: '',
     genre: '居酒屋',
     attention: '両方可',
     image_path: '/images/豚足ホルモンアベ.jpg'
@@ -168,8 +148,6 @@ shops = [
     opening_times_daytimes: '11:00 - 21:00',
     opening_times_night:'',
     closing_days: '無休',
-    boudget_daytimes: '',
-    boudget_night: '',
     genre: 'タイ料理',
     attention: 'テラス席のみ可',
     image_path: '/images/ニナイ.jpg'
@@ -184,8 +162,6 @@ shops = [
     opening_times_daytimes: '12:00 - 23:00',
     opening_times_night:'18:30 - 2:00',
     closing_days: '月曜日',
-    boudget_daytimes: '',
-    boudget_night: '',
     genre: 'メキシコ料理',
     attention: '両方可',
     image_path: '/images/ナディア.jpg'
@@ -200,8 +176,6 @@ shops = [
     opening_times_daytimes: '11:30 - 14:00',
     opening_times_night:'17:30 - 20:30',
     closing_days: '水曜日',
-    boudget_daytimes: '',
-    boudget_night: '',
     genre: 'イタリアン',
     attention: 'テラス席のみ可',
     image_path: '/images/アピアチャーレ.jpg'
@@ -216,8 +190,6 @@ shops = [
     opening_times_daytimes: '11:00 - 21:00',
     opening_times_night:'',
     closing_days: '年末年始',
-    boudget_daytimes: '',
-    boudget_night: '',
     genre: 'カフェ',
     attention: '両方可',
     image_path: '/images/ブラッスリー.jpg'
@@ -232,8 +204,6 @@ shops = [
     opening_times_daytimes: '14:00 - 0:00',
     opening_times_night:'16:00 - 0:00',
     closing_days: '無休',
-    boudget_daytimes: '',
-    boudget_night: '',
     genre: '居酒屋',
     attention: '両方可',
     image_path: '/images/鳥楽.jpg'
@@ -248,8 +218,6 @@ shops = [
     opening_times_daytimes: '11:00 - 23:00',
     opening_times_night:'',
     closing_days: '不定休',
-    boudget_daytimes: '',
-    boudget_night: '',
     genre: 'カフェ・イタリアン',
     attention: 'テラス席のみ可',
     image_path: '/images/Fresco.jpg'
@@ -264,8 +232,6 @@ shops = [
     opening_times_daytimes: '11:00 - 16:00',
     opening_times_night:'17:30 - 21:30',
     closing_days: '1月1日',
-    boudget_daytimes: '',
-    boudget_night: '',
     genre: '和食',
     attention: 'テラス席のみ可',
     image_path: '/images/吉草.jpg'
@@ -280,8 +246,6 @@ shops = [
     opening_times_daytimes: '11:00 - 15:00',
     opening_times_night: '17:30 - 22:00',
     closing_days: '水曜日',
-    boudget_daytimes: '',
-    boudget_night: '',
     genre: 'イタリアン',
     attention: 'テラス席のみ可',
     image_path: '/images/Brighton.jpg'
@@ -296,8 +260,6 @@ shops = [
     opening_times_daytimes: '11:30 - 15:00',
     opening_times_night: '17:30 - 23:00',
     closing_days: '無休',
-    boudget_daytimes: '',
-    boudget_night: '',
     genre: 'ステーキ',
     attention: '店内のみ可',
     image_path: '/images/ラステイクス.jpg'
@@ -312,8 +274,6 @@ shops = [
     opening_times_daytimes: '11:00 - 23:30',
     opening_times_night:'',
     closing_days: '不明',
-    boudget_daytimes: '',
-    boudget_night: '',
     genre: '居酒屋',
     attention: '両方可',
     image_path: '/images/松の葉.jpg'
@@ -328,8 +288,6 @@ shops = [
     opening_times_daytimes: '12:00 - 15:00',
     opening_times_night:'18:00 - 23:00',
     closing_days: '月1不定休',
-    boudget_daytimes: '',
-    boudget_night: '',
     genre: 'ステーキ',
     attention: '両方可',
     image_path: '/images/千房.jpg'
@@ -344,8 +302,6 @@ shops = [
     opening_times_daytimes: '11:30 - 15:00',
     opening_times_night: '18:00 - 23:30',
     closing_days: '日曜日',
-    boudget_daytimes: '',
-    boudget_night: '',
     genre: 'スペイン料理',
     attention: 'テラス席のみ',
     image_path: '/images/ラスボカス.jpg'
