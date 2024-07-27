@@ -9,10 +9,8 @@ class CreateShops < ActiveRecord::Migration[7.0]
       t.string      :opening_times_daytimes
       t.string      :opening_times_night
       t.string      :closing_days
-      t.string      :boudget_daytimes
-      t.string      :boudget_night
       t.string      :genre
-      t.text        :attention
+      t.text        :attention,       null: false
       t.timestamps
     end
   end

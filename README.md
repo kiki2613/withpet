@@ -75,7 +75,7 @@ https://docs.google.com/spreadsheets/d/19KPq_hpz5bkpo16du6P2-GSGEaualpxMtLhthCs5
 - javascriptを使ってトップページに写真がスライドショーのように流れる機能
 
 # データベース設計
-[![Image from Gyazo](https://i.gyazo.com/558ef7d73e0d9265b3e3fe1ae155f7c6.png)](https://gyazo.com/558ef7d73e0d9265b3e3fe1ae155f7c6)
+[![Image from Gyazo](https://i.gyazo.com/3ef8024227b21b5a93e86d4c5f88fed5.png)](https://gyazo.com/3ef8024227b21b5a93e86d4c5f88fed5)
 ＊カラム名が_idになっているものは、ActiveHashで管理しています
 
 # 画面遷移図
