@@ -69,9 +69,8 @@ https://withpet.onrender.com
 https://docs.google.com/spreadsheets/d/19KPq_hpz5bkpo16du6P2-GSGEaualpxMtLhthCs5zQA/edit?usp=sharing
 
 # 実装予定の機能
-- モデルの単体テストコード
 - データを増やしていくための店舗情報投稿機能、もしくはスクレイピングでデータを借りる機能
-- 検索条件を追加（予算や営業時間でも検索できるようにするため）
+- 検索条件を追加（営業時間でも検索できるようにするため）
 - javascriptを使ってトップページに写真がスライドショーのように流れる機能
 
 # データベース設計
